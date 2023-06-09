@@ -1,0 +1,17 @@
+server:
+  port: 7076
+
+spring:
+  profiles:
+    active: dev
+  ##swagger配置
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+#日志配置
+logging:
+  file:
+    name: logs/logs
+  level:
+    com.demo: debug

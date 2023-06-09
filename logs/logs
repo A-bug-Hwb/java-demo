@@ -1,0 +1,16 @@
+2023-06-09 10:10:37.448  INFO 15396 --- [main] com.demo.DemoApplication                 : Starting DemoApplication using Java 1.8.0_191 on LAPTOP-NOCK2TV1 with PID 15396 (F:\IdeaWork\demo\target\classes started by ROG in F:\IdeaWork\demo)
+2023-06-09 10:10:37.453 DEBUG 15396 --- [main] com.demo.DemoApplication                 : Running with Spring Boot v2.6.11, Spring v5.3.22
+2023-06-09 10:10:37.454  INFO 15396 --- [main] com.demo.DemoApplication                 : The following 1 profile is active: "dev"
+2023-06-09 10:10:38.211  INFO 15396 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-06-09 10:10:38.213  INFO 15396 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-06-09 10:10:38.233  INFO 15396 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+2023-06-09 10:10:38.572  INFO 15396 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7076 (http)
+2023-06-09 10:10:38.579  INFO 15396 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-09 10:10:38.579  INFO 15396 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-06-09 10:10:38.691  INFO 15396 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-09 10:10:38.691  INFO 15396 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1201 ms
+2023-06-09 10:10:38.950 DEBUG 15396 --- [main] com.demo.auth.JWTAuthorizationFilter     : Filter 'JWTAuthorizationFilter' configured for use
+2023-06-09 10:10:39.255  INFO 15396 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7945b206, org.springframework.security.web.context.SecurityContextPersistenceFilter@180b3819, org.springframework.security.web.header.HeaderWriterFilter@6435fa1c, org.springframework.security.web.authentication.logout.LogoutFilter@52ae997b, org.springframework.web.filter.CorsFilter@3e4e4c1, com.demo.auth.JWTAuthorizationFilter@26fb4d06, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@47272cd3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4de79b7d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7d42542, org.springframework.security.web.session.SessionManagementFilter@2272cbb0, org.springframework.security.web.access.ExceptionTranslationFilter@66383c29, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@25a94b55]
+2023-06-09 10:10:39.447  INFO 15396 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7076 (http) with context path ''
+2023-06-09 10:10:39.563  INFO 15396 --- [main] com.demo.DemoApplication                 : Started DemoApplication in 2.44 seconds (JVM running for 3.166)
+2023-06-09 10:10:39.565  INFO 15396 --- [main] com.demo.DemoApplication                 : 启动成功
