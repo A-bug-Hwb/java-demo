@@ -27,12 +27,11 @@ public class JWTAuthorizationFilter extends OncePerRequestFilter {
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain chain) throws ServletException, IOException {
-        String tokenHeader = request.getHeader(tokenService.TOKEN_HEADER);
-        if (tokenHeader == null){
+        String token = tokenService.getToken(request);
+        if (token == null){
             chain.doFilter(request, response);
             return;
         }
-        String token = tokenHeader.replace(tokenService.TOKEN_PREFIX, "");
         LoginUser loginUser = tokenService.getLoginUser(token);
         if (loginUser != null)
         {

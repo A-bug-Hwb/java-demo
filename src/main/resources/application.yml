@@ -2,12 +2,12 @@ server:
   port: 7076
 
 spring:
-  profiles:
-    active: dev
-  ##swagger配置
+  ##Knife4j配置
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher
+  profiles:
+    active: dev
 
 #日志配置
 logging:
@@ -15,3 +15,12 @@ logging:
     name: logs/logs
   level:
     com.demo: debug
+
+# token配置
+token:
+  # 令牌自定义标识
+  header: Authorization
+  # 令牌密钥
+  secret: tldzqjysvduqsdybnnldbkksfgpbglcqfhujbqbxbcbgdtabfophxxtdpzmuanqjlqwkqihpujdlsfqbztxwmzrdpglmreshlfkyljizkrvbthwewgpqoendfloxxhclyzdilcepdafzofizibjyslguddpynoahwkszqkggxqyxpggsdcmtufnvbipmrzoakcnyygzdqnpdlzjhgbhihnlbwlbvzjlmfazvnfpdmdesnxqthgedqrcrbdonqxukbyytioprcafttuvpwrpucfmxulvalvkcwfnjmavqgrvzaxqeuthltoxkwiziwadjpihyzwpyotttiyrmmbochmtvjdahnwtovmnqzvsvvtroyjqyefqrqgohrlfrmdivpfgktgzxqvoucejsxbretmqbjspdkgxaviqgkkdhecdvltuxanijbneqmglnlrlhwoyifswczglftjcbaydpfcklqpgtbavhvatwrfrcnftpeqcnokoitvgmrogkxnvo
+  # 令牌有效期（默认30分钟）
+  expireTime: 30
