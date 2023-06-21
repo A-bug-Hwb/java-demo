@@ -2,6 +2,7 @@ package com.demo.config;
 
 import com.demo.auth.JWTAuthenticationEntryPoint;
 import com.demo.auth.JWTAuthorizationFilter;
+import com.demo.auth.handle.LogoutSuccessHandlerImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
@@ -16,6 +17,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.security.web.authentication.logout.LogoutFilter;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
@@ -27,6 +29,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     @Qualifier("userDetailsServiceImpl")
     private UserDetailsService userDetailsService;
+
+    /** 退出处理类 */
+    @Autowired
+    private LogoutSuccessHandlerImpl logoutSuccessHandler;
 
     @Autowired
     private CorsFilter corsFilter;
@@ -69,7 +75,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 //访问/data路径下的请求需要admin
 //                .antMatchers("/data/**").hasRole("admin")
                 //对登录做放行，生成token
-                .antMatchers("/login","/register").anonymous()
+                .antMatchers("/login","/register","/druid/**").anonymous()
                 .antMatchers("/*.html").permitAll()
                 .antMatchers("/*.mp4").permitAll()
                 .antMatchers("/*.png").permitAll()
@@ -87,13 +93,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .anyRequest()
                 .authenticated();
 
+        httpSecurity.logout().logoutUrl("/logout").logoutSuccessHandler(logoutSuccessHandler);
         // 添加JWT filter
         httpSecurity.addFilterBefore(
                 jwtAuthorizationFilter, UsernamePasswordAuthenticationFilter.class);
 
         // 添加CORS filter
         httpSecurity.addFilterBefore(corsFilter, JWTAuthorizationFilter.class);
-//        httpSecurity.addFilterBefore(corsFilter, LogoutFilter.class);
+        httpSecurity.addFilterBefore(corsFilter, LogoutFilter.class);
     }
 
     @Override

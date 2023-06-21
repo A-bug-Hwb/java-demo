@@ -1,4 +1,4 @@
-package com.demo.common;
+package com.demo.common.constants;
 
 import io.jsonwebtoken.Claims;
 

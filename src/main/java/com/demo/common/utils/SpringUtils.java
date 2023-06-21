@@ -1,4 +1,4 @@
-package com.demo.utils;
+package com.demo.common.utils;
 
 import org.springframework.aop.framework.AopContext;
 import org.springframework.beans.BeansException;

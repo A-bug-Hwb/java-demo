@@ -5,7 +5,7 @@ import com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceBuilder;
 import com.demo.druid.DataSourceType;
 import com.demo.druid.DruidProperties;
 import com.demo.druid.DynamicDataSource;
-import com.demo.utils.SpringUtils;
+import com.demo.common.utils.SpringUtils;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;

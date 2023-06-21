@@ -2,7 +2,7 @@ package com.demo.auth;
 
 
 import com.demo.common.service.TokenService;
-import com.demo.domain.user.LoginUser;
+import com.demo.domain.LogRegPojo.LoginUser;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -27,14 +27,11 @@ public class JWTAuthorizationFilter extends OncePerRequestFilter {
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain chain) throws ServletException, IOException {
-        String token = tokenService.getToken(request);
-        if (token == null){
-            chain.doFilter(request, response);
-            return;
-        }
-        LoginUser loginUser = tokenService.getLoginUser(token);
+
+        LoginUser loginUser = tokenService.getLoginUser(request);
         if (loginUser != null)
         {
+            tokenService.verifyToken(loginUser);
             UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(loginUser, null, loginUser.getAuthorities());
             authenticationToken.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
             SecurityContextHolder.getContext().setAuthentication(authenticationToken);

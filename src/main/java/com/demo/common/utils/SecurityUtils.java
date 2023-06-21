@@ -1,7 +1,7 @@
-package com.demo.utils;
+package com.demo.common.utils;
 
 import com.demo.constant.HttpStatus;
-import com.demo.domain.user.LoginUser;
+import com.demo.domain.LogRegPojo.LoginUser;
 import com.demo.exception.ServiceException;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -21,7 +21,7 @@ public class SecurityUtils {
     {
         try
         {
-            return getLoginUser().getId();
+            return getLoginUser().getUserBo().getUserId();
         }
         catch (Exception e)
         {
@@ -35,7 +35,7 @@ public class SecurityUtils {
     {
         try
         {
-            return getLoginUser().getUsername();
+            return getLoginUser().getUserBo().getUserName();
         }
         catch (Exception e)
         {

@@ -1,11 +1,10 @@
 package com.demo.service;
 
-import com.demo.domain.role.Role;
 
-import java.util.List;
+import java.util.Set;
 
 public interface IRoleService {
 
-    List<Role> findRoleByUsername(String username);
+    Set<String> getRoleKeys(Long userId);
 
 }

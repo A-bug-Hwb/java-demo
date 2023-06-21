@@ -1,11 +1,13 @@
 package com.demo.service;
 
-import com.demo.domain.user.User;
+import com.baomidou.mybatisplus.extension.service.IService;
+import com.demo.domain.UserPojo.UserBo;
+import com.demo.domain.UserPojo.UserPo;
 
 
-public interface IUserService {
+public interface IUserService extends IService<UserPo> {
 
-    User findUserByUsername(String username);
+    UserBo findUserByUsername(String username);
 
-    boolean registerUser(User user);
+    boolean registerUser(UserBo user);
 }

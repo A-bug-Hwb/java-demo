@@ -31,10 +31,10 @@ spring:
       # 从库数据源
       slave:
         # 从数据源开关/默认关闭
-        enabled: false
-        url:
-        username:
-        password:
+        enabled: true
+        url: jdbc:mysql://localhost:3306/demo_assistant?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
+        username: root
+        password: root
       # 初始连接数
       initialSize: 5
       # 最小连接池数量
@@ -74,3 +74,8 @@ spring:
         wall:
           config:
             multi-statement-allow: true
+mybatis-plus:
+  mapper-locations: classpath*:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl

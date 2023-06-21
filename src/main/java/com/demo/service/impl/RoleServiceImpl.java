@@ -1,30 +1,39 @@
 package com.demo.service.impl;
 
-import com.demo.domain.role.Role;
+import com.baomidou.mybatisplus.core.toolkit.Wrappers;
+import com.demo.domain.RolePojo.RolePo;
+import com.demo.mapper.RoleMapper;
 import com.demo.service.IRoleService;
+import com.demo.service.IUserRoleService;
+import com.demo.common.utils.StringUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
+import javax.annotation.Resource;
 import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 @Service
 public class RoleServiceImpl implements IRoleService {
 
+    @Resource
+    private RoleMapper roleMapper;
+
+    @Autowired
+    private IUserRoleService iUserRoleService;
+
 
     @Override
-    public List<Role> findRoleByUsername(String username) {
-        List<Role> list = new ArrayList<>();
-        Role role = new Role();
-        role.setId(1L);
-        role.setUsername("小郝");
-        role.setName("admin");
-        list.add(role);
-        Role role1 = new Role();
-        role1.setId(2L);
-        role1.setUsername("小郝");
-        role1.setName("role");
-        list.add(role1);
-        return list;
-    }
+    public Set<String> getRoleKeys(Long userId) {
 
+        List<Long> roleIds =  iUserRoleService.getRoleIds(userId);
+        if (StringUtils.isNotEmpty(roleIds)){
+            Set<String> set = roleMapper.selectList(Wrappers.lambdaQuery(RolePo.class).in(RolePo::getRoleId,roleIds)).stream().map(val ->{
+                return val.getRoleKey();
+            }).collect(Collectors.toSet());
+            return set;
+        }
+        return null;
+    }
 }

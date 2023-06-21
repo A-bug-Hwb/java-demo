@@ -1,4 +1,4 @@
-package com.demo.domain.user;
+package com.demo.domain.LogRegPojo;
 
 import lombok.Data;
 

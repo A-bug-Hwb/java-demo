@@ -1,16 +1,357 @@
-2023-06-09 10:10:37.448  INFO 15396 --- [main] com.demo.DemoApplication                 : Starting DemoApplication using Java 1.8.0_191 on LAPTOP-NOCK2TV1 with PID 15396 (F:\IdeaWork\demo\target\classes started by ROG in F:\IdeaWork\demo)
-2023-06-09 10:10:37.453 DEBUG 15396 --- [main] com.demo.DemoApplication                 : Running with Spring Boot v2.6.11, Spring v5.3.22
-2023-06-09 10:10:37.454  INFO 15396 --- [main] com.demo.DemoApplication                 : The following 1 profile is active: "dev"
-2023-06-09 10:10:38.211  INFO 15396 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2023-06-09 10:10:38.213  INFO 15396 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2023-06-09 10:10:38.233  INFO 15396 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
-2023-06-09 10:10:38.572  INFO 15396 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7076 (http)
-2023-06-09 10:10:38.579  INFO 15396 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2023-06-09 10:10:38.579  INFO 15396 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
-2023-06-09 10:10:38.691  INFO 15396 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2023-06-09 10:10:38.691  INFO 15396 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1201 ms
-2023-06-09 10:10:38.950 DEBUG 15396 --- [main] com.demo.auth.JWTAuthorizationFilter     : Filter 'JWTAuthorizationFilter' configured for use
-2023-06-09 10:10:39.255  INFO 15396 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7945b206, org.springframework.security.web.context.SecurityContextPersistenceFilter@180b3819, org.springframework.security.web.header.HeaderWriterFilter@6435fa1c, org.springframework.security.web.authentication.logout.LogoutFilter@52ae997b, org.springframework.web.filter.CorsFilter@3e4e4c1, com.demo.auth.JWTAuthorizationFilter@26fb4d06, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@47272cd3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4de79b7d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7d42542, org.springframework.security.web.session.SessionManagementFilter@2272cbb0, org.springframework.security.web.access.ExceptionTranslationFilter@66383c29, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@25a94b55]
-2023-06-09 10:10:39.447  INFO 15396 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7076 (http) with context path ''
-2023-06-09 10:10:39.563  INFO 15396 --- [main] com.demo.DemoApplication                 : Started DemoApplication in 2.44 seconds (JVM running for 3.166)
-2023-06-09 10:10:39.565  INFO 15396 --- [main] com.demo.DemoApplication                 : 启动成功
+2023-06-21 09:23:32.017  INFO 18700 --- [main] com.demo.DemoApplication                 : Starting DemoApplication using Java 1.8.0_191 on LAPTOP-NOCK2TV1 with PID 18700 (F:\IdeaWork\demo\target\classes started by ROG in F:\IdeaWork\demo)
+2023-06-21 09:23:32.017 DEBUG 18700 --- [main] com.demo.DemoApplication                 : Running with Spring Boot v2.6.11, Spring v5.3.22
+2023-06-21 09:23:32.033  INFO 18700 --- [main] com.demo.DemoApplication                 : The following 1 profile is active: "dev"
+2023-06-21 09:23:33.555  INFO 18700 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-06-21 09:23:33.555  INFO 18700 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-06-21 09:23:33.586  INFO 18700 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 0 Redis repository interfaces.
+2023-06-21 09:23:33.978  INFO 18700 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7076 (http)
+2023-06-21 09:23:33.978  INFO 18700 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-21 09:23:33.978  INFO 18700 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-06-21 09:23:34.103  INFO 18700 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-21 09:23:34.103  INFO 18700 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2039 ms
+2023-06-21 09:23:34.420 DEBUG 18700 --- [main] com.demo.auth.JWTAuthorizationFilter     : Filter 'JWTAuthorizationFilter' configured for use
+2023-06-21 09:23:34.990  WARN 18700 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.demo.domain.UserPojo.UserPo".
+2023-06-21 09:23:35.005  WARN 18700 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.demo.domain.UserPojo.UserPo ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2023-06-21 09:23:35.084  WARN 18700 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.demo.domain.RolePojo.RolePo".
+2023-06-21 09:23:35.084  WARN 18700 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.demo.domain.RolePojo.RolePo ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2023-06-21 09:23:35.100  WARN 18700 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.demo.domain.UserRolePojo.UserRolePo".
+2023-06-21 09:23:35.100  WARN 18700 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.demo.domain.UserRolePojo.UserRolePo ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2023-06-21 09:23:35.405  INFO 18700 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@740b9a50, org.springframework.security.web.context.SecurityContextPersistenceFilter@8b13d91, org.springframework.security.web.header.HeaderWriterFilter@6a567f7b, org.springframework.security.web.authentication.logout.LogoutFilter@14b4340c, org.springframework.web.filter.CorsFilter@66cd621b, com.demo.auth.JWTAuthorizationFilter@46039a21, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2589d787, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@61394494, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@476fde05, org.springframework.security.web.session.SessionManagementFilter@34c7232c, org.springframework.security.web.access.ExceptionTranslationFilter@de77146, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1a914089]
+2023-06-21 09:23:35.656  INFO 18700 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7076 (http) with context path ''
+2023-06-21 09:23:35.768  INFO 18700 --- [main] com.demo.DemoApplication                 : Started DemoApplication in 4.079 seconds (JVM running for 4.793)
+2023-06-21 09:23:35.768  INFO 18700 --- [main] com.demo.DemoApplication                 : 启动成功
+2023-06-21 09:24:07.601  INFO 18700 --- [http-nio-7076-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-21 09:24:07.601  INFO 18700 --- [http-nio-7076-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-21 09:24:07.601  INFO 18700 --- [http-nio-7076-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-06-21 09:24:25.694  INFO 18700 --- [http-nio-7076-exec-3] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-06-21 09:24:25.694 DEBUG 18700 --- [http-nio-7076-exec-3] com.demo.mapper.UserMapper.selectList    : ==>  Preparing: SELECT user_id,uid,nick_name,user_name,mobile,mailbox,password,signature,introduce,status,create_by,create_time,update_by,update_time,remark,deleted FROM security_user WHERE (user_name = ?)
+2023-06-21 09:24:25.712 DEBUG 18700 --- [http-nio-7076-exec-3] com.demo.mapper.UserMapper.selectList    : ==> Parameters: 小郝(String)
+2023-06-21 09:24:25.724 DEBUG 18700 --- [http-nio-7076-exec-3] com.demo.mapper.UserMapper.selectList    : <==      Total: 1
+2023-06-21 09:24:25.736 DEBUG 18700 --- [http-nio-7076-exec-3] c.demo.mapper.UserRoleMapper.selectList  : ==>  Preparing: SELECT role_id,user_id FROM security_user_role WHERE (user_id = ?)
+2023-06-21 09:24:25.741 DEBUG 18700 --- [http-nio-7076-exec-3] c.demo.mapper.UserRoleMapper.selectList  : ==> Parameters: 2(Long)
+2023-06-21 09:27:31.329  INFO 16324 --- [main] com.demo.DemoApplication                 : Starting DemoApplication using Java 1.8.0_191 on LAPTOP-NOCK2TV1 with PID 16324 (F:\IdeaWork\demo\target\classes started by ROG in F:\IdeaWork\demo)
+2023-06-21 09:27:31.329 DEBUG 16324 --- [main] com.demo.DemoApplication                 : Running with Spring Boot v2.6.11, Spring v5.3.22
+2023-06-21 09:27:31.329  INFO 16324 --- [main] com.demo.DemoApplication                 : The following 1 profile is active: "dev"
+2023-06-21 09:27:32.092  INFO 16324 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-06-21 09:27:32.098  INFO 16324 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-06-21 09:27:32.122  INFO 16324 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 0 Redis repository interfaces.
+2023-06-21 09:27:32.551  INFO 16324 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7076 (http)
+2023-06-21 09:27:32.558  INFO 16324 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-21 09:27:32.558  INFO 16324 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-06-21 09:27:32.662  INFO 16324 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-21 09:27:32.662  INFO 16324 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1301 ms
+2023-06-21 09:27:32.941 DEBUG 16324 --- [main] com.demo.auth.JWTAuthorizationFilter     : Filter 'JWTAuthorizationFilter' configured for use
+2023-06-21 09:27:33.531  WARN 16324 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.demo.domain.UserPojo.UserPo".
+2023-06-21 09:27:33.541  WARN 16324 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.demo.domain.UserPojo.UserPo ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2023-06-21 09:27:33.631  WARN 16324 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.demo.domain.RolePojo.RolePo".
+2023-06-21 09:27:33.631  WARN 16324 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.demo.domain.RolePojo.RolePo ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2023-06-21 09:27:33.641  WARN 16324 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.demo.domain.UserRolePojo.UserRolePo".
+2023-06-21 09:27:33.641  WARN 16324 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.demo.domain.UserRolePojo.UserRolePo ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2023-06-21 09:27:34.007  INFO 16324 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3d59933, org.springframework.security.web.context.SecurityContextPersistenceFilter@61d09475, org.springframework.security.web.header.HeaderWriterFilter@7434ee13, org.springframework.security.web.authentication.logout.LogoutFilter@7a3a49e5, org.springframework.web.filter.CorsFilter@3e0a9b1d, com.demo.auth.JWTAuthorizationFilter@7de35070, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@12d44a2a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6d2db15b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4a0c3aa8, org.springframework.security.web.session.SessionManagementFilter@23a78c77, org.springframework.security.web.access.ExceptionTranslationFilter@5f1f0ee6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2d230cff]
+2023-06-21 09:27:34.305  INFO 16324 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7076 (http) with context path ''
+2023-06-21 09:27:34.450  INFO 16324 --- [main] com.demo.DemoApplication                 : Started DemoApplication in 3.412 seconds (JVM running for 4.714)
+2023-06-21 09:27:34.450  INFO 16324 --- [main] com.demo.DemoApplication                 : 启动成功
+2023-06-21 09:28:04.398  INFO 16324 --- [http-nio-7076-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-21 09:28:04.398  INFO 16324 --- [http-nio-7076-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-21 09:28:04.398  INFO 16324 --- [http-nio-7076-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-06-21 09:28:12.026  INFO 16324 --- [http-nio-7076-exec-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-06-21 09:28:12.054 DEBUG 16324 --- [http-nio-7076-exec-1] com.demo.mapper.UserMapper.selectList    : ==>  Preparing: SELECT user_id,uid,nick_name,user_name,mobile,mailbox,password,signature,introduce,status,create_by,create_time,update_by,update_time,remark,deleted FROM security_user WHERE (user_name = ?)
+2023-06-21 09:28:12.228 DEBUG 16324 --- [http-nio-7076-exec-1] com.demo.mapper.UserMapper.selectList    : ==> Parameters: 小郝(String)
+2023-06-21 09:28:12.338 DEBUG 16324 --- [http-nio-7076-exec-1] com.demo.mapper.UserMapper.selectList    : <==      Total: 1
+2023-06-21 09:28:22.455 DEBUG 16324 --- [http-nio-7076-exec-1] c.demo.mapper.UserRoleMapper.selectList  : ==>  Preparing: SELECT role_id,user_id FROM security_user_role WHERE (user_id = ?)
+2023-06-21 09:28:22.455 DEBUG 16324 --- [http-nio-7076-exec-1] c.demo.mapper.UserRoleMapper.selectList  : ==> Parameters: 2(Long)
+2023-06-21 09:29:24.596  INFO 16324 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-06-21 09:29:24.596  INFO 16324 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-06-21 09:29:28.804  INFO 23992 --- [main] com.demo.DemoApplication                 : Starting DemoApplication using Java 1.8.0_191 on LAPTOP-NOCK2TV1 with PID 23992 (F:\IdeaWork\demo\target\classes started by ROG in F:\IdeaWork\demo)
+2023-06-21 09:29:28.808 DEBUG 23992 --- [main] com.demo.DemoApplication                 : Running with Spring Boot v2.6.11, Spring v5.3.22
+2023-06-21 09:29:28.808  INFO 23992 --- [main] com.demo.DemoApplication                 : The following 1 profile is active: "dev"
+2023-06-21 09:29:29.628  INFO 23992 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-06-21 09:29:29.644  INFO 23992 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-06-21 09:29:29.675  INFO 23992 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 0 Redis repository interfaces.
+2023-06-21 09:29:30.195  INFO 23992 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7076 (http)
+2023-06-21 09:29:30.209  INFO 23992 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-21 09:29:30.209  INFO 23992 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-06-21 09:29:30.334  INFO 23992 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-21 09:29:30.334  INFO 23992 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1494 ms
+2023-06-21 09:29:30.617 DEBUG 23992 --- [main] com.demo.auth.JWTAuthorizationFilter     : Filter 'JWTAuthorizationFilter' configured for use
+2023-06-21 09:29:31.141  WARN 23992 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.demo.domain.UserPojo.UserPo".
+2023-06-21 09:29:31.141  WARN 23992 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.demo.domain.UserPojo.UserPo ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2023-06-21 09:29:31.235  WARN 23992 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.demo.domain.RolePojo.RolePo".
+2023-06-21 09:29:31.235  WARN 23992 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.demo.domain.RolePojo.RolePo ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2023-06-21 09:29:31.235  WARN 23992 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.demo.domain.UserRolePojo.UserRolePo".
+2023-06-21 09:29:31.235  WARN 23992 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.demo.domain.UserRolePojo.UserRolePo ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2023-06-21 09:29:31.519  INFO 23992 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@53314f76, org.springframework.security.web.context.SecurityContextPersistenceFilter@11f23038, org.springframework.security.web.header.HeaderWriterFilter@34a20f16, org.springframework.security.web.authentication.logout.LogoutFilter@7c453c34, org.springframework.web.filter.CorsFilter@2c7db926, com.demo.auth.JWTAuthorizationFilter@3b2553d9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@691567ea, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@34136bd1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@62a6674f, org.springframework.security.web.session.SessionManagementFilter@14de1901, org.springframework.security.web.access.ExceptionTranslationFilter@5a9840f3, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@599f1b7]
+2023-06-21 09:29:31.772  INFO 23992 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7076 (http) with context path ''
+2023-06-21 09:29:31.882  INFO 23992 --- [main] com.demo.DemoApplication                 : Started DemoApplication in 3.423 seconds (JVM running for 4.055)
+2023-06-21 09:29:31.896  INFO 23992 --- [main] com.demo.DemoApplication                 : 启动成功
+2023-06-21 09:29:37.285  INFO 23992 --- [http-nio-7076-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-21 09:29:37.285  INFO 23992 --- [http-nio-7076-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-21 09:29:37.285  INFO 23992 --- [http-nio-7076-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-06-21 09:29:38.079  INFO 23992 --- [http-nio-7076-exec-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-06-21 09:29:38.079 DEBUG 23992 --- [http-nio-7076-exec-1] com.demo.mapper.UserMapper.selectList    : ==>  Preparing: SELECT user_id,uid,nick_name,user_name,mobile,mailbox,password,signature,introduce,status,create_by,create_time,update_by,update_time,remark,deleted FROM security_user WHERE (user_name = ?)
+2023-06-21 09:29:38.103 DEBUG 23992 --- [http-nio-7076-exec-1] com.demo.mapper.UserMapper.selectList    : ==> Parameters: 小郝(String)
+2023-06-21 09:29:38.110 DEBUG 23992 --- [http-nio-7076-exec-1] com.demo.mapper.UserMapper.selectList    : <==      Total: 1
+2023-06-21 09:29:38.127 DEBUG 23992 --- [http-nio-7076-exec-1] c.demo.mapper.UserRoleMapper.selectList  : ==>  Preparing: SELECT role_id,user_id FROM security_user_role WHERE (user_id = ?)
+2023-06-21 09:29:38.127 DEBUG 23992 --- [http-nio-7076-exec-1] c.demo.mapper.UserRoleMapper.selectList  : ==> Parameters: 2(Long)
+2023-06-21 09:31:47.185  INFO 25436 --- [main] com.demo.DemoApplication                 : Starting DemoApplication using Java 1.8.0_191 on LAPTOP-NOCK2TV1 with PID 25436 (F:\IdeaWork\demo\target\classes started by ROG in F:\IdeaWork\demo)
+2023-06-21 09:31:47.185 DEBUG 25436 --- [main] com.demo.DemoApplication                 : Running with Spring Boot v2.6.11, Spring v5.3.22
+2023-06-21 09:31:47.185  INFO 25436 --- [main] com.demo.DemoApplication                 : The following 1 profile is active: "dev"
+2023-06-21 09:31:47.943  INFO 25436 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-06-21 09:31:47.943  INFO 25436 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-06-21 09:31:47.975  INFO 25436 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 0 Redis repository interfaces.
+2023-06-21 09:31:48.452  INFO 25436 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7076 (http)
+2023-06-21 09:31:48.452  INFO 25436 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-21 09:31:48.452  INFO 25436 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-06-21 09:31:48.562  INFO 25436 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-21 09:31:48.562  INFO 25436 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1346 ms
+2023-06-21 09:31:48.877 DEBUG 25436 --- [main] com.demo.auth.JWTAuthorizationFilter     : Filter 'JWTAuthorizationFilter' configured for use
+2023-06-21 09:31:49.434  WARN 25436 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.demo.domain.UserPojo.UserPo".
+2023-06-21 09:31:49.434  WARN 25436 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.demo.domain.UserPojo.UserPo ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2023-06-21 09:31:49.528  WARN 25436 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.demo.domain.RolePojo.RolePo".
+2023-06-21 09:31:49.528  WARN 25436 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.demo.domain.RolePojo.RolePo ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2023-06-21 09:31:49.546  WARN 25436 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.demo.domain.UserRolePojo.UserRolePo".
+2023-06-21 09:31:49.546  WARN 25436 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.demo.domain.UserRolePojo.UserRolePo ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2023-06-21 09:31:49.878  INFO 25436 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3534651a, org.springframework.security.web.context.SecurityContextPersistenceFilter@12d44a2a, org.springframework.security.web.header.HeaderWriterFilter@50fd739d, org.springframework.security.web.authentication.logout.LogoutFilter@acd3460, org.springframework.web.filter.CorsFilter@2035d65b, com.demo.auth.JWTAuthorizationFilter@7c901203, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7f70e244, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1b485c8b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2d593b56, org.springframework.security.web.session.SessionManagementFilter@61d09475, org.springframework.security.web.access.ExceptionTranslationFilter@76fc5687, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3c87e851]
+2023-06-21 09:31:50.161  INFO 25436 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7076 (http) with context path ''
+2023-06-21 09:31:50.287  INFO 25436 --- [main] com.demo.DemoApplication                 : Started DemoApplication in 3.449 seconds (JVM running for 4.394)
+2023-06-21 09:31:50.287  INFO 25436 --- [main] com.demo.DemoApplication                 : 启动成功
+2023-06-21 09:31:58.369  INFO 25436 --- [http-nio-7076-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-21 09:31:58.369  INFO 25436 --- [http-nio-7076-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-21 09:31:58.375  INFO 25436 --- [http-nio-7076-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2023-06-21 09:31:59.235  INFO 25436 --- [http-nio-7076-exec-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-06-21 09:31:59.240 DEBUG 25436 --- [http-nio-7076-exec-1] com.demo.mapper.UserMapper.selectList    : ==>  Preparing: SELECT user_id,uid,nick_name,user_name,mobile,mailbox,password,signature,introduce,status,create_by,create_time,update_by,update_time,remark,deleted FROM security_user WHERE (user_name = ?)
+2023-06-21 09:31:59.265 DEBUG 25436 --- [http-nio-7076-exec-1] com.demo.mapper.UserMapper.selectList    : ==> Parameters: 小郝(String)
+2023-06-21 09:31:59.271 DEBUG 25436 --- [http-nio-7076-exec-1] com.demo.mapper.UserMapper.selectList    : <==      Total: 1
+2023-06-21 09:32:13.038 DEBUG 25436 --- [http-nio-7076-exec-1] c.demo.mapper.UserRoleMapper.selectList  : ==>  Preparing: SELECT role_id,user_id FROM security_user_role WHERE (user_id = ?)
+2023-06-21 09:32:13.053 DEBUG 25436 --- [http-nio-7076-exec-1] c.demo.mapper.UserRoleMapper.selectList  : ==> Parameters: 2(Long)
+2023-06-21 09:32:31.661  INFO 25436 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-06-21 09:32:31.661  INFO 25436 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-06-21 09:32:34.256  INFO 17628 --- [main] com.demo.DemoApplication                 : Starting DemoApplication using Java 1.8.0_191 on LAPTOP-NOCK2TV1 with PID 17628 (F:\IdeaWork\demo\target\classes started by ROG in F:\IdeaWork\demo)
+2023-06-21 09:32:34.256 DEBUG 17628 --- [main] com.demo.DemoApplication                 : Running with Spring Boot v2.6.11, Spring v5.3.22
+2023-06-21 09:32:34.256  INFO 17628 --- [main] com.demo.DemoApplication                 : The following 1 profile is active: "dev"
+2023-06-21 09:32:34.962  INFO 17628 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-06-21 09:32:34.962  INFO 17628 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-06-21 09:32:34.993  INFO 17628 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 0 Redis repository interfaces.
+2023-06-21 09:32:35.416  INFO 17628 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7076 (http)
+2023-06-21 09:32:35.416  INFO 17628 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-21 09:32:35.416  INFO 17628 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-06-21 09:32:35.526  INFO 17628 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-21 09:32:35.526  INFO 17628 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1239 ms
+2023-06-21 09:32:35.841 DEBUG 17628 --- [main] com.demo.auth.JWTAuthorizationFilter     : Filter 'JWTAuthorizationFilter' configured for use
+2023-06-21 09:32:36.392  WARN 17628 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.demo.domain.UserPojo.UserPo".
+2023-06-21 09:32:36.392  WARN 17628 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.demo.domain.UserPojo.UserPo ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2023-06-21 09:32:36.489  WARN 17628 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.demo.domain.RolePojo.RolePo".
+2023-06-21 09:32:36.489  WARN 17628 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.demo.domain.RolePojo.RolePo ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2023-06-21 09:32:36.504  WARN 17628 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.demo.domain.UserRolePojo.UserRolePo".
+2023-06-21 09:32:36.504  WARN 17628 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.demo.domain.UserRolePojo.UserRolePo ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2023-06-21 09:32:36.836  INFO 17628 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@47b961e2, org.springframework.security.web.context.SecurityContextPersistenceFilter@78504ce9, org.springframework.security.web.header.HeaderWriterFilter@7cbf4f8c, org.springframework.security.web.authentication.logout.LogoutFilter@4fd3b20a, org.springframework.web.filter.CorsFilter@1b409a79, com.demo.auth.JWTAuthorizationFilter@5fd8dd66, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@12608986, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4119346d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@d2cb2d0, org.springframework.security.web.session.SessionManagementFilter@d0a2c82, org.springframework.security.web.access.ExceptionTranslationFilter@2382b2f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1b98355f]
+2023-06-21 09:32:37.120  INFO 17628 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7076 (http) with context path ''
+2023-06-21 09:32:37.246  INFO 17628 --- [main] com.demo.DemoApplication                 : Started DemoApplication in 3.346 seconds (JVM running for 4.151)
+2023-06-21 09:32:37.246  INFO 17628 --- [main] com.demo.DemoApplication                 : 启动成功
+2023-06-21 09:32:47.259  INFO 17628 --- [http-nio-7076-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-21 09:32:47.259  INFO 17628 --- [http-nio-7076-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-21 09:32:47.259  INFO 17628 --- [http-nio-7076-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-06-21 09:32:48.127  INFO 17628 --- [http-nio-7076-exec-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-06-21 09:32:48.127 DEBUG 17628 --- [http-nio-7076-exec-1] com.demo.mapper.UserMapper.selectList    : ==>  Preparing: SELECT user_id,uid,nick_name,user_name,mobile,mailbox,password,signature,introduce,status,create_by,create_time,update_by,update_time,remark,deleted FROM security_user WHERE (user_name = ?)
+2023-06-21 09:32:48.143 DEBUG 17628 --- [http-nio-7076-exec-1] com.demo.mapper.UserMapper.selectList    : ==> Parameters: 小郝(String)
+2023-06-21 09:32:48.158 DEBUG 17628 --- [http-nio-7076-exec-1] com.demo.mapper.UserMapper.selectList    : <==      Total: 1
+2023-06-21 09:32:54.406 DEBUG 17628 --- [http-nio-7076-exec-1] c.demo.mapper.UserRoleMapper.selectList  : ==>  Preparing: SELECT role_id,user_id FROM security_user_role WHERE (user_id = ?)
+2023-06-21 09:32:54.406 DEBUG 17628 --- [http-nio-7076-exec-1] c.demo.mapper.UserRoleMapper.selectList  : ==> Parameters: 2(Long)
+2023-06-21 09:34:38.908  INFO 17628 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-06-21 09:34:38.913  INFO 17628 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-06-21 09:34:42.737  INFO 25956 --- [main] com.demo.DemoApplication                 : Starting DemoApplication using Java 1.8.0_191 on LAPTOP-NOCK2TV1 with PID 25956 (F:\IdeaWork\demo\target\classes started by ROG in F:\IdeaWork\demo)
+2023-06-21 09:34:42.739 DEBUG 25956 --- [main] com.demo.DemoApplication                 : Running with Spring Boot v2.6.11, Spring v5.3.22
+2023-06-21 09:34:42.740  INFO 25956 --- [main] com.demo.DemoApplication                 : The following 1 profile is active: "dev"
+2023-06-21 09:34:43.403  INFO 25956 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-06-21 09:34:43.405  INFO 25956 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-06-21 09:34:43.436  INFO 25956 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 0 Redis repository interfaces.
+2023-06-21 09:34:43.835  INFO 25956 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7076 (http)
+2023-06-21 09:34:43.841  INFO 25956 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-21 09:34:43.842  INFO 25956 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-06-21 09:34:43.936  INFO 25956 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-21 09:34:43.936  INFO 25956 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1167 ms
+2023-06-21 09:34:44.198 DEBUG 25956 --- [main] com.demo.auth.JWTAuthorizationFilter     : Filter 'JWTAuthorizationFilter' configured for use
+2023-06-21 09:34:44.749  WARN 25956 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.demo.domain.UserPojo.UserPo".
+2023-06-21 09:34:44.752  WARN 25956 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.demo.domain.UserPojo.UserPo ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2023-06-21 09:34:44.836  WARN 25956 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.demo.domain.RolePojo.RolePo".
+2023-06-21 09:34:44.838  WARN 25956 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.demo.domain.RolePojo.RolePo ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2023-06-21 09:34:44.854  WARN 25956 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.demo.domain.UserRolePojo.UserRolePo".
+2023-06-21 09:34:44.854  WARN 25956 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.demo.domain.UserRolePojo.UserRolePo ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2023-06-21 09:34:45.166  INFO 25956 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@64f4f12, org.springframework.security.web.context.SecurityContextPersistenceFilter@6c951ada, org.springframework.security.web.header.HeaderWriterFilter@2e6d76ba, org.springframework.security.web.authentication.logout.LogoutFilter@16d431b4, org.springframework.web.filter.CorsFilter@4130955c, com.demo.auth.JWTAuthorizationFilter@7f4701b1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3b0d3a63, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@691567ea, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@37d28938, org.springframework.security.web.session.SessionManagementFilter@38ac8968, org.springframework.security.web.access.ExceptionTranslationFilter@7e61e25c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6314df3c]
+2023-06-21 09:34:45.446  INFO 25956 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7076 (http) with context path ''
+2023-06-21 09:34:45.566  INFO 25956 --- [main] com.demo.DemoApplication                 : Started DemoApplication in 3.137 seconds (JVM running for 3.786)
+2023-06-21 09:34:45.569  INFO 25956 --- [main] com.demo.DemoApplication                 : 启动成功
+2023-06-21 09:34:49.564  INFO 25956 --- [http-nio-7076-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-21 09:34:49.564  INFO 25956 --- [http-nio-7076-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-21 09:34:49.566  INFO 25956 --- [http-nio-7076-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-06-21 09:34:50.387  INFO 25956 --- [http-nio-7076-exec-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-06-21 09:34:50.391 DEBUG 25956 --- [http-nio-7076-exec-1] com.demo.mapper.UserMapper.selectList    : ==>  Preparing: SELECT user_id,uid,nick_name,user_name,mobile,mailbox,password,signature,introduce,status,create_by,create_time,update_by,update_time,remark,deleted FROM security_user WHERE (user_name = ?)
+2023-06-21 09:34:50.410 DEBUG 25956 --- [http-nio-7076-exec-1] com.demo.mapper.UserMapper.selectList    : ==> Parameters: 小郝(String)
+2023-06-21 09:34:50.421 DEBUG 25956 --- [http-nio-7076-exec-1] com.demo.mapper.UserMapper.selectList    : <==      Total: 1
+2023-06-21 09:34:50.437 DEBUG 25956 --- [http-nio-7076-exec-1] c.demo.mapper.UserRoleMapper.selectList  : ==>  Preparing: SELECT role_id,user_id FROM security_user_role WHERE (user_id = ?)
+2023-06-21 09:34:50.438 DEBUG 25956 --- [http-nio-7076-exec-1] c.demo.mapper.UserRoleMapper.selectList  : ==> Parameters: 2(Long)
+2023-06-21 09:34:58.744  INFO 2492 --- [main] com.demo.DemoApplication                 : Starting DemoApplication using Java 1.8.0_191 on LAPTOP-NOCK2TV1 with PID 2492 (F:\IdeaWork\demo\target\classes started by ROG in F:\IdeaWork\demo)
+2023-06-21 09:34:58.747 DEBUG 2492 --- [main] com.demo.DemoApplication                 : Running with Spring Boot v2.6.11, Spring v5.3.22
+2023-06-21 09:34:58.747  INFO 2492 --- [main] com.demo.DemoApplication                 : The following 1 profile is active: "dev"
+2023-06-21 09:34:59.531  INFO 2492 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-06-21 09:34:59.534  INFO 2492 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-06-21 09:34:59.566  INFO 2492 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 0 Redis repository interfaces.
+2023-06-21 09:35:00.043  INFO 2492 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7076 (http)
+2023-06-21 09:35:00.051  INFO 2492 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-21 09:35:00.051  INFO 2492 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-06-21 09:35:00.162  INFO 2492 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-21 09:35:00.163  INFO 2492 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1384 ms
+2023-06-21 09:35:00.468 DEBUG 2492 --- [main] com.demo.auth.JWTAuthorizationFilter     : Filter 'JWTAuthorizationFilter' configured for use
+2023-06-21 09:35:01.048  WARN 2492 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.demo.domain.UserPojo.UserPo".
+2023-06-21 09:35:01.052  WARN 2492 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.demo.domain.UserPojo.UserPo ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2023-06-21 09:35:01.149  WARN 2492 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.demo.domain.RolePojo.RolePo".
+2023-06-21 09:35:01.149  WARN 2492 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.demo.domain.RolePojo.RolePo ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2023-06-21 09:35:01.168  WARN 2492 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.demo.domain.UserRolePojo.UserRolePo".
+2023-06-21 09:35:01.169  WARN 2492 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.demo.domain.UserRolePojo.UserRolePo ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2023-06-21 09:35:01.549  INFO 2492 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@65259c53, org.springframework.security.web.context.SecurityContextPersistenceFilter@6d2db15b, org.springframework.security.web.header.HeaderWriterFilter@4882b9a, org.springframework.security.web.authentication.logout.LogoutFilter@69d7bc1a, org.springframework.web.filter.CorsFilter@394fb736, com.demo.auth.JWTAuthorizationFilter@1a497286, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1b485c8b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@ce19c86, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4bff28e7, org.springframework.security.web.session.SessionManagementFilter@105ffc58, org.springframework.security.web.access.ExceptionTranslationFilter@430aae8e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4a0c3aa8]
+2023-06-21 09:35:01.851  INFO 2492 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7076 (http) with context path ''
+2023-06-21 09:35:01.985  INFO 2492 --- [main] com.demo.DemoApplication                 : Started DemoApplication in 3.606 seconds (JVM running for 4.499)
+2023-06-21 09:35:01.988  INFO 2492 --- [main] com.demo.DemoApplication                 : 启动成功
+2023-06-21 09:35:06.375  INFO 2492 --- [http-nio-7076-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-21 09:35:06.375  INFO 2492 --- [http-nio-7076-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-21 09:35:06.377  INFO 2492 --- [http-nio-7076-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-06-21 09:35:07.308  INFO 2492 --- [http-nio-7076-exec-2] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-06-21 09:35:07.312 DEBUG 2492 --- [http-nio-7076-exec-2] com.demo.mapper.UserMapper.selectList    : ==>  Preparing: SELECT user_id,uid,nick_name,user_name,mobile,mailbox,password,signature,introduce,status,create_by,create_time,update_by,update_time,remark,deleted FROM security_user WHERE (user_name = ?)
+2023-06-21 09:35:07.331 DEBUG 2492 --- [http-nio-7076-exec-2] com.demo.mapper.UserMapper.selectList    : ==> Parameters: 小郝(String)
+2023-06-21 09:35:07.343 DEBUG 2492 --- [http-nio-7076-exec-2] com.demo.mapper.UserMapper.selectList    : <==      Total: 1
+2023-06-21 09:35:11.458 DEBUG 2492 --- [http-nio-7076-exec-2] c.demo.mapper.UserRoleMapper.selectList  : ==>  Preparing: SELECT role_id,user_id FROM security_user_role WHERE (user_id = ?)
+2023-06-21 09:35:11.462 DEBUG 2492 --- [http-nio-7076-exec-2] c.demo.mapper.UserRoleMapper.selectList  : ==> Parameters: 2(Long)
+2023-06-21 09:36:54.841  INFO 2492 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-06-21 09:36:54.848  INFO 2492 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-06-21 09:36:58.630  INFO 17120 --- [main] com.demo.DemoApplication                 : Starting DemoApplication using Java 1.8.0_191 on LAPTOP-NOCK2TV1 with PID 17120 (F:\IdeaWork\demo\target\classes started by ROG in F:\IdeaWork\demo)
+2023-06-21 09:36:58.632 DEBUG 17120 --- [main] com.demo.DemoApplication                 : Running with Spring Boot v2.6.11, Spring v5.3.22
+2023-06-21 09:36:58.632  INFO 17120 --- [main] com.demo.DemoApplication                 : The following 1 profile is active: "dev"
+2023-06-21 09:36:59.316  INFO 17120 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-06-21 09:36:59.318  INFO 17120 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-06-21 09:36:59.349  INFO 17120 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 0 Redis repository interfaces.
+2023-06-21 09:36:59.733  INFO 17120 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7076 (http)
+2023-06-21 09:36:59.740  INFO 17120 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-21 09:36:59.740  INFO 17120 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-06-21 09:36:59.830  INFO 17120 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-21 09:36:59.830  INFO 17120 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1164 ms
+2023-06-21 09:37:00.090 DEBUG 17120 --- [main] com.demo.auth.JWTAuthorizationFilter     : Filter 'JWTAuthorizationFilter' configured for use
+2023-06-21 09:37:00.643  WARN 17120 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.demo.domain.UserPojo.UserPo".
+2023-06-21 09:37:00.647  WARN 17120 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.demo.domain.UserPojo.UserPo ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2023-06-21 09:37:00.735  WARN 17120 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.demo.domain.RolePojo.RolePo".
+2023-06-21 09:37:00.735  WARN 17120 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.demo.domain.RolePojo.RolePo ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2023-06-21 09:37:00.749  WARN 17120 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.demo.domain.UserRolePojo.UserRolePo".
+2023-06-21 09:37:00.750  WARN 17120 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.demo.domain.UserRolePojo.UserRolePo ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2023-06-21 09:37:01.039  INFO 17120 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3f6cce7f, org.springframework.security.web.context.SecurityContextPersistenceFilter@28be7fec, org.springframework.security.web.header.HeaderWriterFilter@6c951ada, org.springframework.security.web.authentication.logout.LogoutFilter@71936a92, org.springframework.web.filter.CorsFilter@68d6d775, com.demo.auth.JWTAuthorizationFilter@3bf54172, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@34136bd1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6a09484c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2725ca05, org.springframework.security.web.session.SessionManagementFilter@5c8d58ed, org.springframework.security.web.access.ExceptionTranslationFilter@1a1c21b4, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6b0f266e]
+2023-06-21 09:37:01.307  INFO 17120 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7076 (http) with context path ''
+2023-06-21 09:37:01.429  INFO 17120 --- [main] com.demo.DemoApplication                 : Started DemoApplication in 3.098 seconds (JVM running for 3.722)
+2023-06-21 09:37:01.431  INFO 17120 --- [main] com.demo.DemoApplication                 : 启动成功
+2023-06-21 09:37:06.136  INFO 17120 --- [http-nio-7076-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-21 09:37:06.136  INFO 17120 --- [http-nio-7076-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-21 09:37:06.138  INFO 17120 --- [http-nio-7076-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-06-21 09:37:06.949  INFO 17120 --- [http-nio-7076-exec-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-06-21 09:37:06.954 DEBUG 17120 --- [http-nio-7076-exec-1] com.demo.mapper.UserMapper.selectList    : ==>  Preparing: SELECT user_id,uid,nick_name,user_name,mobile,mailbox,password,signature,introduce,status,create_by,create_time,update_by,update_time,remark,deleted FROM security_user WHERE (user_name = ?)
+2023-06-21 09:37:06.973 DEBUG 17120 --- [http-nio-7076-exec-1] com.demo.mapper.UserMapper.selectList    : ==> Parameters: 小郝(String)
+2023-06-21 09:37:06.985 DEBUG 17120 --- [http-nio-7076-exec-1] com.demo.mapper.UserMapper.selectList    : <==      Total: 1
+2023-06-21 09:37:06.999 DEBUG 17120 --- [http-nio-7076-exec-1] c.demo.mapper.UserRoleMapper.selectList  : ==>  Preparing: SELECT role_id,user_id FROM security_user_role WHERE (user_id = ?)
+2023-06-21 09:37:07.000 DEBUG 17120 --- [http-nio-7076-exec-1] c.demo.mapper.UserRoleMapper.selectList  : ==> Parameters: 2(Long)
+2023-06-21 09:37:07.002 DEBUG 17120 --- [http-nio-7076-exec-1] c.demo.mapper.UserRoleMapper.selectList  : <==      Total: 0
+2023-06-21 09:45:39.139  INFO 12872 --- [main] com.demo.DemoApplication                 : Starting DemoApplication using Java 1.8.0_191 on LAPTOP-NOCK2TV1 with PID 12872 (F:\IdeaWork\demo\target\classes started by ROG in F:\IdeaWork\demo)
+2023-06-21 09:45:39.139 DEBUG 12872 --- [main] com.demo.DemoApplication                 : Running with Spring Boot v2.6.11, Spring v5.3.22
+2023-06-21 09:45:39.139  INFO 12872 --- [main] com.demo.DemoApplication                 : The following 1 profile is active: "dev"
+2023-06-21 09:45:39.779  INFO 12872 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-06-21 09:45:39.779  INFO 12872 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-06-21 09:45:39.809  INFO 12872 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 0 Redis repository interfaces.
+2023-06-21 09:45:40.169  INFO 12872 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7076 (http)
+2023-06-21 09:45:40.179  INFO 12872 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-21 09:45:40.179  INFO 12872 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-06-21 09:45:40.269  INFO 12872 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-21 09:45:40.269  INFO 12872 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1098 ms
+2023-06-21 09:45:40.509 DEBUG 12872 --- [main] com.demo.auth.JWTAuthorizationFilter     : Filter 'JWTAuthorizationFilter' configured for use
+2023-06-21 09:45:41.039  WARN 12872 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.demo.domain.UserPojo.UserPo".
+2023-06-21 09:45:41.039  WARN 12872 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.demo.domain.UserPojo.UserPo ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2023-06-21 09:45:41.119  WARN 12872 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.demo.domain.RolePojo.RolePo".
+2023-06-21 09:45:41.119  WARN 12872 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.demo.domain.RolePojo.RolePo ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2023-06-21 09:45:41.132  WARN 12872 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.demo.domain.UserRolePojo.UserRolePo".
+2023-06-21 09:45:41.132  WARN 12872 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.demo.domain.UserRolePojo.UserRolePo ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2023-06-21 09:45:41.408  INFO 12872 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6075b369, org.springframework.security.web.context.SecurityContextPersistenceFilter@61359e87, org.springframework.security.web.header.HeaderWriterFilter@6c0b51da, org.springframework.web.filter.CorsFilter@58b5a2f3, org.springframework.security.web.authentication.logout.LogoutFilter@48d739f, org.springframework.web.filter.CorsFilter@58b5a2f3, com.demo.auth.JWTAuthorizationFilter@3252747e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@45037e16, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2313db84, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@231cdda8, org.springframework.security.web.session.SessionManagementFilter@27a9f025, org.springframework.security.web.access.ExceptionTranslationFilter@285a4fe3, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@476fde05]
+2023-06-21 09:45:41.659  INFO 12872 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7076 (http) with context path ''
+2023-06-21 09:45:41.769  INFO 12872 --- [main] com.demo.DemoApplication                 : Started DemoApplication in 2.933 seconds (JVM running for 3.566)
+2023-06-21 09:45:41.769  INFO 12872 --- [main] com.demo.DemoApplication                 : 启动成功
+2023-06-21 09:45:45.408  INFO 12872 --- [http-nio-7076-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-21 09:45:45.408  INFO 12872 --- [http-nio-7076-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-21 09:45:45.409  INFO 12872 --- [http-nio-7076-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-06-21 09:46:23.551  INFO 12872 --- [http-nio-7076-exec-8] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-06-21 09:46:23.551 DEBUG 12872 --- [http-nio-7076-exec-8] com.demo.mapper.UserMapper.selectList    : ==>  Preparing: SELECT user_id,uid,nick_name,user_name,mobile,mailbox,password,signature,introduce,status,create_by,create_time,update_by,update_time,remark,deleted FROM security_user WHERE (user_name = ?)
+2023-06-21 09:46:23.569 DEBUG 12872 --- [http-nio-7076-exec-8] com.demo.mapper.UserMapper.selectList    : ==> Parameters: 小郝(String)
+2023-06-21 09:46:23.582 DEBUG 12872 --- [http-nio-7076-exec-8] com.demo.mapper.UserMapper.selectList    : <==      Total: 1
+2023-06-21 09:46:23.594 DEBUG 12872 --- [http-nio-7076-exec-8] c.demo.mapper.UserRoleMapper.selectList  : ==>  Preparing: SELECT role_id,user_id FROM security_user_role WHERE (user_id = ?)
+2023-06-21 09:46:23.598 DEBUG 12872 --- [http-nio-7076-exec-8] c.demo.mapper.UserRoleMapper.selectList  : ==> Parameters: 2(Long)
+2023-06-21 09:46:23.599 DEBUG 12872 --- [http-nio-7076-exec-8] c.demo.mapper.UserRoleMapper.selectList  : <==      Total: 0
+2023-06-21 09:46:25.076 DEBUG 12872 --- [http-nio-7076-exec-2] com.demo.mapper.UserMapper.selectList    : ==>  Preparing: SELECT user_id,uid,nick_name,user_name,mobile,mailbox,password,signature,introduce,status,create_by,create_time,update_by,update_time,remark,deleted FROM security_user WHERE (user_name = ?)
+2023-06-21 09:46:25.076 DEBUG 12872 --- [http-nio-7076-exec-2] com.demo.mapper.UserMapper.selectList    : ==> Parameters: 小郝(String)
+2023-06-21 09:46:25.078 DEBUG 12872 --- [http-nio-7076-exec-2] com.demo.mapper.UserMapper.selectList    : <==      Total: 1
+2023-06-21 09:46:25.081 DEBUG 12872 --- [http-nio-7076-exec-2] c.demo.mapper.UserRoleMapper.selectList  : ==>  Preparing: SELECT role_id,user_id FROM security_user_role WHERE (user_id = ?)
+2023-06-21 09:46:25.082 DEBUG 12872 --- [http-nio-7076-exec-2] c.demo.mapper.UserRoleMapper.selectList  : ==> Parameters: 2(Long)
+2023-06-21 09:46:25.083 DEBUG 12872 --- [http-nio-7076-exec-2] c.demo.mapper.UserRoleMapper.selectList  : <==      Total: 0
+2023-06-21 09:46:25.674 DEBUG 12872 --- [http-nio-7076-exec-6] com.demo.mapper.UserMapper.selectList    : ==>  Preparing: SELECT user_id,uid,nick_name,user_name,mobile,mailbox,password,signature,introduce,status,create_by,create_time,update_by,update_time,remark,deleted FROM security_user WHERE (user_name = ?)
+2023-06-21 09:46:25.674 DEBUG 12872 --- [http-nio-7076-exec-6] com.demo.mapper.UserMapper.selectList    : ==> Parameters: 小郝(String)
+2023-06-21 09:46:25.676 DEBUG 12872 --- [http-nio-7076-exec-6] com.demo.mapper.UserMapper.selectList    : <==      Total: 1
+2023-06-21 09:46:25.679 DEBUG 12872 --- [http-nio-7076-exec-6] c.demo.mapper.UserRoleMapper.selectList  : ==>  Preparing: SELECT role_id,user_id FROM security_user_role WHERE (user_id = ?)
+2023-06-21 09:46:25.679 DEBUG 12872 --- [http-nio-7076-exec-6] c.demo.mapper.UserRoleMapper.selectList  : ==> Parameters: 2(Long)
+2023-06-21 09:46:25.680 DEBUG 12872 --- [http-nio-7076-exec-6] c.demo.mapper.UserRoleMapper.selectList  : <==      Total: 0
+2023-06-21 09:46:26.154 DEBUG 12872 --- [http-nio-7076-exec-7] com.demo.mapper.UserMapper.selectList    : ==>  Preparing: SELECT user_id,uid,nick_name,user_name,mobile,mailbox,password,signature,introduce,status,create_by,create_time,update_by,update_time,remark,deleted FROM security_user WHERE (user_name = ?)
+2023-06-21 09:46:26.155 DEBUG 12872 --- [http-nio-7076-exec-7] com.demo.mapper.UserMapper.selectList    : ==> Parameters: 小郝(String)
+2023-06-21 09:46:26.156 DEBUG 12872 --- [http-nio-7076-exec-7] com.demo.mapper.UserMapper.selectList    : <==      Total: 1
+2023-06-21 09:46:26.158 DEBUG 12872 --- [http-nio-7076-exec-7] c.demo.mapper.UserRoleMapper.selectList  : ==>  Preparing: SELECT role_id,user_id FROM security_user_role WHERE (user_id = ?)
+2023-06-21 09:46:26.159 DEBUG 12872 --- [http-nio-7076-exec-7] c.demo.mapper.UserRoleMapper.selectList  : ==> Parameters: 2(Long)
+2023-06-21 09:46:26.160 DEBUG 12872 --- [http-nio-7076-exec-7] c.demo.mapper.UserRoleMapper.selectList  : <==      Total: 0
+2023-06-21 09:46:26.522 DEBUG 12872 --- [http-nio-7076-exec-1] com.demo.mapper.UserMapper.selectList    : ==>  Preparing: SELECT user_id,uid,nick_name,user_name,mobile,mailbox,password,signature,introduce,status,create_by,create_time,update_by,update_time,remark,deleted FROM security_user WHERE (user_name = ?)
+2023-06-21 09:46:26.522 DEBUG 12872 --- [http-nio-7076-exec-1] com.demo.mapper.UserMapper.selectList    : ==> Parameters: 小郝(String)
+2023-06-21 09:46:26.524 DEBUG 12872 --- [http-nio-7076-exec-1] com.demo.mapper.UserMapper.selectList    : <==      Total: 1
+2023-06-21 09:46:26.525 DEBUG 12872 --- [http-nio-7076-exec-1] c.demo.mapper.UserRoleMapper.selectList  : ==>  Preparing: SELECT role_id,user_id FROM security_user_role WHERE (user_id = ?)
+2023-06-21 09:46:26.526 DEBUG 12872 --- [http-nio-7076-exec-1] c.demo.mapper.UserRoleMapper.selectList  : ==> Parameters: 2(Long)
+2023-06-21 09:46:26.526 DEBUG 12872 --- [http-nio-7076-exec-1] c.demo.mapper.UserRoleMapper.selectList  : <==      Total: 0
+2023-06-21 09:53:49.589  INFO 6008 --- [main] com.demo.DemoApplication                 : Starting DemoApplication using Java 1.8.0_191 on LAPTOP-NOCK2TV1 with PID 6008 (F:\IdeaWork\demo\target\classes started by ROG in F:\IdeaWork\demo)
+2023-06-21 09:53:49.589 DEBUG 6008 --- [main] com.demo.DemoApplication                 : Running with Spring Boot v2.6.11, Spring v5.3.22
+2023-06-21 09:53:49.589  INFO 6008 --- [main] com.demo.DemoApplication                 : The following 1 profile is active: "dev"
+2023-06-21 09:53:50.239  INFO 6008 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-06-21 09:53:50.239  INFO 6008 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-06-21 09:53:50.269  INFO 6008 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 0 Redis repository interfaces.
+2023-06-21 09:53:50.628  INFO 6008 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7076 (http)
+2023-06-21 09:53:50.629  INFO 6008 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-21 09:53:50.629  INFO 6008 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-06-21 09:53:50.719  INFO 6008 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-21 09:53:50.719  INFO 6008 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1101 ms
+2023-06-21 09:53:50.961 DEBUG 6008 --- [main] com.demo.auth.JWTAuthorizationFilter     : Filter 'JWTAuthorizationFilter' configured for use
+2023-06-21 09:53:51.499  WARN 6008 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.demo.domain.UserPojo.UserPo".
+2023-06-21 09:53:51.499  WARN 6008 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.demo.domain.UserPojo.UserPo ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2023-06-21 09:53:51.579  WARN 6008 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.demo.domain.RolePojo.RolePo".
+2023-06-21 09:53:51.579  WARN 6008 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.demo.domain.RolePojo.RolePo ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2023-06-21 09:53:51.598  WARN 6008 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.demo.domain.UserRolePojo.UserRolePo".
+2023-06-21 09:53:51.599  WARN 6008 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.demo.domain.UserRolePojo.UserRolePo ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2023-06-21 09:53:51.879  INFO 6008 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2725ca05, org.springframework.security.web.context.SecurityContextPersistenceFilter@34c7232c, org.springframework.security.web.header.HeaderWriterFilter@5cfed0ba, org.springframework.web.filter.CorsFilter@7d97e06c, org.springframework.security.web.authentication.logout.LogoutFilter@61359e87, org.springframework.web.filter.CorsFilter@7d97e06c, com.demo.auth.JWTAuthorizationFilter@1e692555, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@8b13d91, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7558633, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7b9088f2, org.springframework.security.web.session.SessionManagementFilter@350da119, org.springframework.security.web.access.ExceptionTranslationFilter@437ed416, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4837f97e]
+2023-06-21 09:53:52.129  INFO 6008 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7076 (http) with context path ''
+2023-06-21 09:53:52.272  INFO 6008 --- [main] com.demo.DemoApplication                 : Started DemoApplication in 2.973 seconds (JVM running for 3.554)
+2023-06-21 09:53:52.279  INFO 6008 --- [main] com.demo.DemoApplication                 : 启动成功
+2023-06-21 10:14:48.323  INFO 13984 --- [main] com.demo.DemoApplication                 : Starting DemoApplication using Java 1.8.0_191 on LAPTOP-NOCK2TV1 with PID 13984 (F:\IdeaWork\demo\target\classes started by ROG in F:\IdeaWork\demo)
+2023-06-21 10:14:48.323 DEBUG 13984 --- [main] com.demo.DemoApplication                 : Running with Spring Boot v2.6.11, Spring v5.3.22
+2023-06-21 10:14:48.323  INFO 13984 --- [main] com.demo.DemoApplication                 : The following 1 profile is active: "dev"
+2023-06-21 10:14:48.973  INFO 13984 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-06-21 10:14:48.983  INFO 13984 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-06-21 10:14:49.013  INFO 13984 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 0 Redis repository interfaces.
+2023-06-21 10:14:49.366  INFO 13984 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7076 (http)
+2023-06-21 10:14:49.373  INFO 13984 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-21 10:14:49.373  INFO 13984 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-06-21 10:14:49.461  INFO 13984 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-21 10:14:49.461  INFO 13984 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1104 ms
+2023-06-21 10:14:49.723 DEBUG 13984 --- [main] com.demo.auth.JWTAuthorizationFilter     : Filter 'JWTAuthorizationFilter' configured for use
+2023-06-21 10:14:50.253  WARN 13984 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.demo.domain.UserPojo.UserPo".
+2023-06-21 10:14:50.262  WARN 13984 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.demo.domain.UserPojo.UserPo ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2023-06-21 10:14:50.343  WARN 13984 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.demo.domain.RolePojo.RolePo".
+2023-06-21 10:14:50.343  WARN 13984 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.demo.domain.RolePojo.RolePo ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2023-06-21 10:14:50.354  WARN 13984 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.demo.domain.UserRolePojo.UserRolePo".
+2023-06-21 10:14:50.354  WARN 13984 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.demo.domain.UserRolePojo.UserRolePo ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2023-06-21 10:14:50.633  INFO 13984 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5d7dd549, org.springframework.security.web.context.SecurityContextPersistenceFilter@16d431b4, org.springframework.security.web.header.HeaderWriterFilter@6de7778f, org.springframework.web.filter.CorsFilter@d3f4505, org.springframework.security.web.authentication.logout.LogoutFilter@d2708a7, org.springframework.web.filter.CorsFilter@d3f4505, com.demo.auth.JWTAuthorizationFilter@431e86b1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7558633, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3dfd6220, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@486bd064, org.springframework.security.web.session.SessionManagementFilter@2589d787, org.springframework.security.web.access.ExceptionTranslationFilter@6a567f7b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3f6cce7f]
+2023-06-21 10:14:50.873  INFO 13984 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7076 (http) with context path ''
+2023-06-21 10:14:50.983  INFO 13984 --- [main] com.demo.DemoApplication                 : Started DemoApplication in 2.951 seconds (JVM running for 3.564)
+2023-06-21 10:14:50.983  INFO 13984 --- [main] com.demo.DemoApplication                 : 启动成功
