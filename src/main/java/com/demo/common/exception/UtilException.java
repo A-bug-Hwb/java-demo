@@ -1,4 +1,4 @@
-package com.demo.exception;
+package com.demo.common.exception;
 
 /**
  * 工具类异常

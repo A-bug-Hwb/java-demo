@@ -1,10 +1,10 @@
-package com.demo.druid.config;
+package com.demo.common.druid.config;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceBuilder;
-import com.demo.druid.DataSourceType;
-import com.demo.druid.DruidProperties;
-import com.demo.druid.DynamicDataSource;
+import com.demo.common.druid.DataSourceType;
+import com.demo.common.druid.DruidProperties;
+import com.demo.common.druid.DynamicDataSource;
 import com.demo.common.utils.SpringUtils;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.ConfigurationProperties;

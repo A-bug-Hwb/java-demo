@@ -1,4 +1,4 @@
-package com.demo.druid;
+package com.demo.common.druid;
 
 public enum DataSourceType {
 

@@ -1,4 +1,4 @@
-package com.demo.druid;
+package com.demo.common.druid;
 
 import java.util.Map;
 import javax.sql.DataSource;

@@ -1,4 +1,4 @@
-package com.demo.exception;
+package com.demo.common.exception;
 
 /**
  * 业务异常

@@ -1,8 +1,8 @@
 package com.demo.common.utils;
 
-import com.demo.constant.HttpStatus;
+import com.demo.common.constants.HttpStatus;
 import com.demo.domain.LogRegPojo.LoginUser;
-import com.demo.exception.ServiceException;
+import com.demo.common.exception.ServiceException;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;

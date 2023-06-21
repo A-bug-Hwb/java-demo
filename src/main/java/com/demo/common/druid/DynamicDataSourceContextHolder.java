@@ -1,4 +1,4 @@
-package com.demo.druid;
+package com.demo.common.druid;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

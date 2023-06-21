@@ -1,4 +1,4 @@
-package com.demo.druid;
+package com.demo.common.druid;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;

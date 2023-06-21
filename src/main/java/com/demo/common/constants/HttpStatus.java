@@ -1,4 +1,4 @@
-package com.demo.constant;
+package com.demo.common.constants;
 
 /**
  * 返回状态码

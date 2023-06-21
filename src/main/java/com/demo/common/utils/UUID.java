@@ -1,6 +1,6 @@
 package com.demo.common.utils;
 
-import com.demo.exception.UtilException;
+import com.demo.common.exception.UtilException;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
