@@ -34,10 +34,6 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 
-        if (username==null || username.equals("")){
-            throw new RuntimeException("用户不能为空");
-        }
-
         Set<String> Permissions = new HashSet<String>();
         // 根据用户名查询用户是否存在
         UserBo user = iUserService.findUserByUsername(username);

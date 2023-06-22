@@ -11,6 +11,7 @@ import com.demo.common.utils.SecurityUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.*;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -30,7 +31,9 @@ public class LogRegServiceImpl implements ILogRegService {
 
     @Override
     public String login(String username,String password) {
-
+        if (StringUtils.isEmpty(username)){
+            return "用户不能为空";
+        }
         // 用户验证
         Authentication authentication = null;
         try {
@@ -44,7 +47,7 @@ public class LogRegServiceImpl implements ILogRegService {
             }
             // 密码错误
             else if (e instanceof BadCredentialsException) {
-                return "密码错误";
+                return "用户名或密码错误";
             }
             // 密码过期
             else if (e instanceof CredentialsExpiredException) {

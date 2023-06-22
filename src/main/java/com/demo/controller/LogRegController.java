@@ -1,5 +1,6 @@
 package com.demo.controller;
 
+import com.alibaba.fastjson.JSONObject;
 import com.demo.domain.LogRegPojo.RegisterUser;
 import com.demo.domain.UserPojo.UserVo;
 import com.demo.service.ILogRegService;
@@ -20,9 +21,12 @@ public class LogRegController {
 
     @PostMapping("/login")
     @ApiOperation("登录")
-    public String login(@RequestBody UserVo loginUser){
+    public JSONObject login(@RequestBody UserVo loginUser){
         String token = iLoginService.login(loginUser.getUserName(),loginUser.getPassword());
-        return token;
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("code",0);
+        jsonObject.put("data",token);
+        return jsonObject;
     }
 
     @PostMapping("/register")
