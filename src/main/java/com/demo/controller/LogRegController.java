@@ -1,6 +1,8 @@
 package com.demo.controller;
 
 import com.alibaba.fastjson.JSONObject;
+import com.demo.common.annotate.DataSource;
+import com.demo.common.druid.DataSourceType;
 import com.demo.domain.LogRegPojo.RegisterUser;
 import com.demo.domain.UserPojo.UserVo;
 import com.demo.service.ILogRegService;
@@ -31,6 +33,7 @@ public class LogRegController {
 
     @PostMapping("/register")
     @ApiOperation("用户注册")
+//    @DataSource(DataSourceType.SLAVE)
     public String register(@RequestBody RegisterUser registerUser){
         String msg = iLoginService.register(registerUser);
         return msg;
