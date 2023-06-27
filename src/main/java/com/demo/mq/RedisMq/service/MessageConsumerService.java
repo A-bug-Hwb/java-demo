@@ -2,6 +2,7 @@ package com.demo.mq.RedisMq.service;
 
 import java.util.concurrent.TimeUnit;
 
+import com.demo.common.RedisCache;
 import com.demo.mq.RedisMq.AnnouncementMessage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -17,7 +18,8 @@ public class MessageConsumerService extends Thread {
 
 
     @Autowired
-    private RedisTemplate<String,Object> redisTemplate;
+    private RedisCache redisCache;
+
 
     private volatile boolean flag = true;
 
@@ -31,7 +33,7 @@ public class MessageConsumerService extends Thread {
             AnnouncementMessage message;
             // 为了能一直循环而不结束
             while(flag && !Thread.currentThread().isInterrupted()) {
-                message = (AnnouncementMessage) redisTemplate.opsForList().rightPop(queueKey,popTime,TimeUnit.SECONDS);
+                message = (AnnouncementMessage) redisCache.redisTemplate.opsForList().rightPop(queueKey,popTime,TimeUnit.SECONDS);
                 System.out.println("接收到了" + message);
             }
         } catch (Exception e) {

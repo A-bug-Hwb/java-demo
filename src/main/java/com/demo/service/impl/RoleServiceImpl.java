@@ -1,6 +1,7 @@
 package com.demo.service.impl;
 
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.demo.domain.RolePojo.RolePo;
 import com.demo.mapper.RoleMapper;
 import com.demo.service.IRoleService;
@@ -15,7 +16,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 @Service
-public class RoleServiceImpl implements IRoleService {
+public class RoleServiceImpl extends ServiceImpl<RoleMapper,RolePo> implements IRoleService {
 
     @Resource
     private RoleMapper roleMapper;

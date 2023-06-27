@@ -68,6 +68,7 @@ public class TokenService
             }
             catch (Exception e)
             {
+                e.printStackTrace();
             }
         }
         return null;

@@ -1,9 +1,9 @@
 package com.demo.service.impl;
 
+import com.demo.common.service.GetPermiInfoService;
 import com.demo.common.utils.StringUtils;
 import com.demo.domain.LogRegPojo.LoginUser;
 import com.demo.domain.UserPojo.UserBo;
-import com.demo.service.IRoleService;
 import com.demo.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -29,7 +29,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     private IUserService iUserService;
 
     @Autowired
-    private IRoleService iRoleService;
+    private GetPermiInfoService getPermiInfoService;
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
@@ -42,7 +42,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
             throw new UsernameNotFoundException("登录用户：" + username + " 不存在");
         }else {
             // 用户存在，继续查询用户所拥有的所有权限
-            Permissions = iRoleService.getRoleKeys(user.getUserId());
+            Permissions = getPermiInfoService.getMenuPermission(user);
         }
 //        List<SimpleGrantedAuthority> grantedAuthorities = new ArrayList<>();
 //        if (Permissions != null && Permissions.size() > 0) {
@@ -55,8 +55,8 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         return createLoginUser(user,Permissions);
     }
 
-    public UserDetails createLoginUser(UserBo userBo, Set<String> roleList )
+    public UserDetails createLoginUser(UserBo userBo, Set<String> Permissions )
     {
-        return new LoginUser(userBo, roleList);
+        return new LoginUser(userBo, Permissions);
     }
 }

@@ -1,11 +1,13 @@
 package com.demo.domain.LogRegPojo;
 
 import com.alibaba.fastjson2.annotation.JSONField;
+import com.demo.domain.RolePojo.RoleBo;
 import com.demo.domain.UserPojo.UserBo;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
+import java.util.List;
 import java.util.Set;
 
 public class LoginUser implements UserDetails {

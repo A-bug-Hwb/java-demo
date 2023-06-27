@@ -1,6 +1,9 @@
 package com.demo.domain.UserPojo;
 
+import com.demo.domain.RolePojo.RoleBo;
 import lombok.Data;
+
+import java.util.List;
 
 @Data
 public class UserBo {
@@ -14,4 +17,7 @@ public class UserBo {
     private String signature;
     private String introduce;
     private Long status;
+
+    /** 角色对象 */
+    private List<RoleBo> roleBos;
 }
