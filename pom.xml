@@ -104,6 +104,7 @@
             <artifactId>UserAgentUtils</artifactId>
             <version>${bitwalker.version}</version>
         </dependency>
+
     </dependencies>
 
 

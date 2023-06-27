@@ -11,6 +11,7 @@ public class MessageProducerService {
 
 //    @Autowired
 //    private RedisTemplate<String, Object> redisTemplate;
+
     @Autowired
     private RedisCache redisCache;
 
@@ -20,6 +21,5 @@ public class MessageProducerService {
         System.out.println("发送了" + message);
         return redisCache.redisTemplate.opsForList().leftPush(queueKey, message);
     }
-
 }
 
