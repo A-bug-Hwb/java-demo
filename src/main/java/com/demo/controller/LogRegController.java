@@ -1,14 +1,14 @@
 package com.demo.controller;
 
 import com.alibaba.fastjson.JSONObject;
-import com.demo.common.annotate.DataSource;
-import com.demo.common.druid.DataSourceType;
+import com.demo.common.annotate.LogStorage;
 import com.demo.domain.LogRegPojo.RegisterUser;
 import com.demo.domain.UserPojo.UserVo;
 import com.demo.service.ILogRegService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -31,8 +31,10 @@ public class LogRegController {
         return jsonObject;
     }
 
+    @LogStorage
     @PostMapping("/register")
     @ApiOperation("用户注册")
+    @PreAuthorize("@ac.hasPermi('system:user:list')")
 //    @DataSource(DataSourceType.SLAVE)
     public String register(@RequestBody RegisterUser registerUser){
         String msg = iLoginService.register(registerUser);

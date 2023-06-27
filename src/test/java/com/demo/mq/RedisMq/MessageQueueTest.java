@@ -1,6 +1,5 @@
 package com.demo.mq.RedisMq;
 
-import com.demo.mq.RedisMq.AnnouncementMessage;
 import com.demo.mq.RedisMq.service.MessageProducerService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +17,7 @@ public class MessageQueueTest {
     private MessageProducerService producer;
 
     /**
-     * 这个测时 的先启动主启动类，
+     * 这个测时 先启动主启动类，
      * 然后消费者可以一直在监听。
      */
     @Test

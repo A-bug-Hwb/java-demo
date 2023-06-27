@@ -22,6 +22,7 @@
         <druid.version>1.2.15</druid.version>
         <mybatis-plus.version>3.5.3.1</mybatis-plus.version>
         <bitwalker.version>1.21</bitwalker.version>
+        <aop.version>3.1.0</aop.version>
     </properties>
     <dependencies>
         <dependency>
@@ -103,6 +104,12 @@
             <groupId>eu.bitwalker</groupId>
             <artifactId>UserAgentUtils</artifactId>
             <version>${bitwalker.version}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-aop -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+            <version>${aop.version}</version>
         </dependency>
 
     </dependencies>
