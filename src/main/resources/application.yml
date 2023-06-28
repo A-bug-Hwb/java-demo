@@ -1,14 +1,12 @@
 server:
   port: 7076
-
 spring:
-  ##Knife4j配置
+  #Knife4j配置
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher
   profiles:
     active: dev
-
 #日志配置
 logging:
   file:

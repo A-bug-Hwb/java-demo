@@ -20,13 +20,13 @@ public class RegisterUser {
     /**
      * 密码
      */
-    @ApiModelProperty(value = "用户昵称", required = true)
+    @ApiModelProperty(value = "密码", required = true)
     @NotNull
     @NotBlank(message = "密码不能为空")
     @Length(min=5, max=20,message = "密码长度必须在5到20个字符之间")
     private String password;
 
-    @ApiModelProperty(value = "用户昵称", required = true)
+    @ApiModelProperty(value = "确认密码", required = true)
     @NotNull
     @NotBlank(message = "密码不能为空")
     @Length(min=5, max=20,message = "密码长度必须在5到20个字符之间")
