@@ -5,14 +5,13 @@ import lombok.Data;
 @Data
 public class UserVo {
 
-    /**
-     * 用户名：这是数据库的字段，
-     * 是userName或者是account就写对应的字段
-     */
+    private Long userId;
+    private String uid;
+    private String nickName;
     private String userName;
-
-    /**
-     * 密码
-     */
-    private String password;
+    private String mobile;
+    private String mailbox;
+    private String signature;
+    private String introduce;
+    private Long status;
 }

@@ -1,6 +1,5 @@
-package com.demo.service.impl;
+package com.demo.common.service;
 
-import com.demo.common.service.GetPermiInfoService;
 import com.demo.common.utils.StringUtils;
 import com.demo.domain.LogRegPojo.LoginUser;
 import com.demo.domain.UserPojo.UserBo;
@@ -36,13 +35,13 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
         Set<String> Permissions = new HashSet<String>();
         // 根据用户名查询用户是否存在
-        UserBo user = iUserService.findUserByUsername(username);
-        if (StringUtils.isNull(user)) {
+        UserBo userBo = iUserService.findUserByUsername(username);
+        if (StringUtils.isNull(userBo)) {
             // 用户不存在
             throw new UsernameNotFoundException("登录用户：" + username + " 不存在");
         }else {
             // 用户存在，继续查询用户所拥有的所有权限
-            Permissions = getPermiInfoService.getMenuPermission(user);
+            Permissions = getPermiInfoService.getMenuPermission(userBo);
         }
 //        List<SimpleGrantedAuthority> grantedAuthorities = new ArrayList<>();
 //        if (Permissions != null && Permissions.size() > 0) {
@@ -52,11 +51,11 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 //                grantedAuthorities.add(simpleGrantedAuthority);
 //            }
 //        }
-        return createLoginUser(user,Permissions);
+        return createLoginUser(userBo,Permissions);
     }
 
     public UserDetails createLoginUser(UserBo userBo, Set<String> Permissions )
     {
-        return new LoginUser(userBo, Permissions);
+        return new LoginUser(userBo.getUserId(),userBo, Permissions);
     }
 }

@@ -1,5 +1,7 @@
 package com.demo.service.impl;
 
+import com.demo.common.exception.LoginException;
+import com.demo.common.exception.ServiceException;
 import com.demo.common.service.TokenService;
 import com.demo.common.utils.StringUtils;
 import com.demo.domain.LogRegPojo.LoginUser;
@@ -31,9 +33,6 @@ public class LogRegServiceImpl implements ILogRegService {
 
     @Override
     public String login(String username,String password) {
-        if (StringUtils.isEmpty(username)){
-            return "用户不能为空";
-        }
         // 用户验证
         Authentication authentication = null;
         try {
@@ -43,31 +42,31 @@ public class LogRegServiceImpl implements ILogRegService {
         }catch (Exception e){
             // 账号过期
             if (e instanceof AccountExpiredException) {
-                return "账号过期";
+                throw new LoginException("账号过期");
             }
             // 密码错误
             else if (e instanceof BadCredentialsException) {
-                return "用户名或密码错误";
+                throw new LoginException("用户名或密码错误");
             }
             // 密码过期
             else if (e instanceof CredentialsExpiredException) {
-                return "密码过期";
+                throw new LoginException("密码过期");
             }
             // 账号不可用
             else if (e instanceof DisabledException) {
-                return "账号不可用";
+                throw new LoginException("账号不可用");
             }
             //账号锁定
             else if (e instanceof LockedException) {
-                return "账号锁定";
+                throw new LoginException("账号锁定");
             }
             // 用户不存在
             else if (e instanceof InternalAuthenticationServiceException) {
-                return "用户不存在";
+                throw new LoginException("用户不存在");
             }
             // 其他错误
             else{
-                return "未知异常";
+                throw new ServiceException("未知异常");
             }
         }
         LoginUser loginUser = (LoginUser) authentication.getPrincipal();
@@ -76,35 +75,17 @@ public class LogRegServiceImpl implements ILogRegService {
 
 
     @Override
-    public String register(RegisterUser registerUser) {
+    public boolean register(RegisterUser registerUser) {
         String username = registerUser.getUsername();
         String password = registerUser.getPassword();
         String confirmPassword = registerUser.getConfirmPassword();
-        if (StringUtils.isEmpty(username))
+        if (!password.equals(confirmPassword))
         {
-            return "用户名不能为空";
-        }
-        else if (StringUtils.isEmpty(password))
-        {
-            return "用户密码不能为空";
-        }
-        else if (!password.equals(confirmPassword))
-        {
-            return "两次密码不一样";
-        }
-        else if (username.length() > 20
-                || username.length() < 2)
-        {
-            return "账户长度必须在2到20个字符之间";
-        }
-        else if (password.length() > 20
-                || password.length() < 5)
-        {
-            return "密码长度必须在5到20个字符之间";
+            throw new ServiceException("两次密码不一样");
         }
         else if (StringUtils.isNotNull(iUserService.findUserByUsername(username)))
         {
-            return "保存用户'" + username + "'失败，注册账号已存在";
+            throw new ServiceException("保存用户'" + username + "'失败，注册账号已存在");
         }
         else {
             UserBo user = new UserBo();
@@ -113,9 +94,9 @@ public class LogRegServiceImpl implements ILogRegService {
             boolean regFlag = iUserService.registerUser(user);
             if (!regFlag)
             {
-                return  "注册失败,请联系系统管理人员";
+                throw new ServiceException("注册失败,请联系系统管理人员");
             }
         }
-        return "注册成功";
+        return true;
     }
 }

@@ -7,5 +7,5 @@ public interface ILogRegService {
 
     String login(String username,String password);
 
-    String register(RegisterUser registerUser);
+    boolean register(RegisterUser registerUser);
 }

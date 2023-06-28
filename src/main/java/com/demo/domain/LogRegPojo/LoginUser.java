@@ -233,7 +233,7 @@ public class LoginUser implements UserDetails {
         return userBo;
     }
 
-    public void setUserBo(UserBo user)
+    public void setUserBo(UserBo userBo)
     {
         this.userBo = userBo;
     }
