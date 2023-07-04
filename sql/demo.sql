@@ -11,17 +11,17 @@
  Target Server Version : 80031
  File Encoding         : 65001
 
- Date: 26/06/2023 17:33:10
+ Date: 04/07/2023 17:42:26
 */
 
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
 
 -- ----------------------------
--- Table structure for security_role
+-- Table structure for sys_role
 -- ----------------------------
-DROP TABLE IF EXISTS `security_role`;
-CREATE TABLE `security_role`  (
+DROP TABLE IF EXISTS `sys_role`;
+CREATE TABLE `sys_role`  (
   `role_id` int NOT NULL AUTO_INCREMENT COMMENT '角色id',
   `role_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_german2_ci NULL DEFAULT NULL COMMENT '角色名',
   `role_key` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_german2_ci NULL DEFAULT NULL COMMENT '角色标识',
@@ -33,17 +33,17 @@ CREATE TABLE `security_role`  (
   `update_by` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_german2_ci NULL DEFAULT NULL COMMENT '修改者',
   `remark` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_german2_ci NULL DEFAULT NULL COMMENT '备注',
   PRIMARY KEY (`role_id`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_german2_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_german2_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Records of security_role
+-- Records of sys_role
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for security_user
+-- Table structure for sys_user
 -- ----------------------------
-DROP TABLE IF EXISTS `security_user`;
-CREATE TABLE `security_user`  (
+DROP TABLE IF EXISTS `sys_user`;
+CREATE TABLE `sys_user`  (
   `user_id` int NOT NULL AUTO_INCREMENT COMMENT 'id',
   `uid` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_german2_ci NOT NULL COMMENT '用户uid',
   `nick_name` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_german2_ci NULL DEFAULT NULL COMMENT '用户昵称',
@@ -65,21 +65,21 @@ CREATE TABLE `security_user`  (
 ) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_german2_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Records of security_user
+-- Records of sys_user
 -- ----------------------------
-INSERT INTO `security_user` VALUES (2, '136813301671936', NULL, '小郝', NULL, NULL, '$2a$10$Y2rkwunwJU.8SQDw/0mZJeuDTH62c0XpQ24bBa92hD5HmV0NJL/Z2', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `sys_user` VALUES (2, '136813301671936', NULL, '小郝', NULL, NULL, '$2a$10$Y2rkwunwJU.8SQDw/0mZJeuDTH62c0XpQ24bBa92hD5HmV0NJL/Z2', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- ----------------------------
--- Table structure for security_user_role
+-- Table structure for user_role
 -- ----------------------------
-DROP TABLE IF EXISTS `security_user_role`;
-CREATE TABLE `security_user_role`  (
+DROP TABLE IF EXISTS `user_role`;
+CREATE TABLE `user_role`  (
   `role_id` int NULL DEFAULT NULL COMMENT '角色id',
   `user_id` int NULL DEFAULT NULL COMMENT '用户id'
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_german2_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Records of security_user_role
+-- Records of user_role
 -- ----------------------------
 
 SET FOREIGN_KEY_CHECKS = 1;
