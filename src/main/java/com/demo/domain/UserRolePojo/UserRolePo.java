@@ -5,7 +5,7 @@ import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
 @Data
-@TableName("security_user_role")
+@TableName("user_role")
 public class UserRolePo {
 
     private Long roleId;

@@ -6,14 +6,13 @@ import com.demo.common.service.TokenService;
 import com.demo.common.utils.StringUtils;
 import com.demo.domain.LogRegPojo.LoginUser;
 import com.demo.domain.LogRegPojo.RegisterUser;
-import com.demo.domain.UserPojo.UserBo;
+import com.demo.domain.SysUserPojo.SysUserBo;
 import com.demo.service.ILogRegService;
-import com.demo.service.IUserService;
+import com.demo.service.ISysUserService;
 import com.demo.common.utils.SecurityUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.*;
 import org.springframework.security.core.Authentication;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -29,7 +28,7 @@ public class LogRegServiceImpl implements ILogRegService {
     private TokenService tokenService;
 
     @Autowired
-    private IUserService iUserService;
+    private ISysUserService iUserService;
 
     @Override
     public String login(String username,String password) {
@@ -88,7 +87,7 @@ public class LogRegServiceImpl implements ILogRegService {
             throw new ServiceException("保存用户'" + username + "'失败，注册账号已存在");
         }
         else {
-            UserBo user = new UserBo();
+            SysUserBo user = new SysUserBo();
             user.setUserName(username);
             user.setPassword(SecurityUtils.encryptPassword(password));
             boolean regFlag = iUserService.registerUser(user);

@@ -2,8 +2,8 @@ package com.demo.common.service;
 
 import com.demo.common.utils.StringUtils;
 import com.demo.domain.LogRegPojo.LoginUser;
-import com.demo.domain.UserPojo.UserBo;
-import com.demo.service.IUserService;
+import com.demo.domain.SysUserPojo.SysUserBo;
+import com.demo.service.ISysUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -25,7 +25,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
 
     @Autowired
-    private IUserService iUserService;
+    private ISysUserService iUserService;
 
     @Autowired
     private GetPermiInfoService getPermiInfoService;
@@ -35,7 +35,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
         Set<String> Permissions = new HashSet<String>();
         // 根据用户名查询用户是否存在
-        UserBo userBo = iUserService.findUserByUsername(username);
+        SysUserBo userBo = iUserService.findUserByUsername(username);
         if (StringUtils.isNull(userBo)) {
             // 用户不存在
             throw new UsernameNotFoundException("登录用户：" + username + " 不存在");
@@ -54,7 +54,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         return createLoginUser(userBo,Permissions);
     }
 
-    public UserDetails createLoginUser(UserBo userBo, Set<String> Permissions )
+    public UserDetails createLoginUser(SysUserBo userBo, Set<String> Permissions )
     {
         return new LoginUser(userBo.getUserId(),userBo, Permissions);
     }

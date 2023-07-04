@@ -1,13 +1,11 @@
 package com.demo.domain.LogRegPojo;
 
 import com.alibaba.fastjson2.annotation.JSONField;
-import com.demo.domain.RolePojo.RoleBo;
-import com.demo.domain.UserPojo.UserBo;
+import com.demo.domain.SysUserPojo.SysUserBo;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
-import java.util.List;
 import java.util.Set;
 
 public class LoginUser implements UserDetails {
@@ -59,7 +57,7 @@ public class LoginUser implements UserDetails {
     /**
      * 用户信息
      */
-    private UserBo userBo;
+    private SysUserBo userBo;
 
 
     public Long getUserId()
@@ -86,13 +84,13 @@ public class LoginUser implements UserDetails {
     {
     }
 
-    public LoginUser(UserBo userBo, Set<String> permissions)
+    public LoginUser(SysUserBo userBo, Set<String> permissions)
     {
         this.userBo = userBo;
         this.permissions = permissions;
     }
 
-    public LoginUser(Long userId, UserBo userBo, Set<String> permissions)
+    public LoginUser(Long userId, SysUserBo userBo, Set<String> permissions)
     {
         this.userId = userId;
         this.userBo = userBo;
@@ -228,12 +226,12 @@ public class LoginUser implements UserDetails {
         this.permissions = permissions;
     }
 
-    public UserBo getUserBo()
+    public SysUserBo getUserBo()
     {
         return userBo;
     }
 
-    public void setUserBo(UserBo userBo)
+    public void setUserBo(SysUserBo userBo)
     {
         this.userBo = userBo;
     }

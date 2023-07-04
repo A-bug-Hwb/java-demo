@@ -4,15 +4,15 @@ import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.demo.common.SnowflakeIdWorker;
 import com.demo.common.utils.StringUtils;
-import com.demo.domain.RolePojo.RoleBo;
-import com.demo.domain.RolePojo.RolePo;
-import com.demo.domain.UserPojo.UserBo;
-import com.demo.domain.UserPojo.UserPo;
+import com.demo.domain.SysRolePojo.SysRoleBo;
+import com.demo.domain.SysRolePojo.SysRolePo;
+import com.demo.domain.SysUserPojo.SysUserBo;
+import com.demo.domain.SysUserPojo.SysUserPo;
 import com.demo.domain.UserRolePojo.UserRolePo;
-import com.demo.mapper.UserMapper;
-import com.demo.service.IRoleService;
+import com.demo.mapper.SysUserMapper;
+import com.demo.service.ISysRoleService;
 import com.demo.service.IUserRoleService;
-import com.demo.service.IUserService;
+import com.demo.service.ISysUserService;
 import com.demo.common.utils.BeanMapHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -23,42 +23,42 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
-public class UserServiceImpl extends ServiceImpl<UserMapper, UserPo> implements IUserService  {
+public class SysUserServiceImpl extends ServiceImpl<SysUserMapper, SysUserPo> implements ISysUserService {
 
     @Resource
-    private UserMapper securityUserMapper;
+    private SysUserMapper securityUserMapper;
 
     @Autowired
     private IUserRoleService iUserRoleService;
 
     @Autowired
-    private IRoleService iRoleService;
+    private ISysRoleService iSysRoleService;
 
     @Override
-    public UserBo findUserByUsername(String username) {
-        UserBo userBo = null;
-        UserPo securityUserPo = securityUserMapper.selectOne(Wrappers.lambdaQuery(UserPo.class).eq(UserPo::getUserName,username));
+    public SysUserBo findUserByUsername(String username) {
+        SysUserBo userBo = null;
+        SysUserPo securityUserPo = securityUserMapper.selectOne(Wrappers.lambdaQuery(SysUserPo.class).eq(SysUserPo::getUserName,username));
         if (StringUtils.isNotNull(securityUserPo)){
             List<Long> roleIds = iUserRoleService.list(Wrappers.lambdaQuery(UserRolePo.class).eq(UserRolePo::getUserId,securityUserPo.getUserId())).stream().map(val ->{
                 return val.getRoleId();
             }).collect(Collectors.toList());
-            userBo = (UserBo)BeanMapHelper.Bean2Bean(securityUserPo, UserBo.class);
+            userBo = (SysUserBo)BeanMapHelper.Bean2Bean(securityUserPo, SysUserBo.class);
             if (StringUtils.isNotEmpty(roleIds)){
-                List<RoleBo> roleBos = new ArrayList<>();
-                List<RolePo> rolePos= iRoleService.list(Wrappers.lambdaQuery(RolePo.class).in(RolePo::getRoleId,roleIds));
-                for (RolePo rolePo:rolePos){
-                    RoleBo roleBo = (RoleBo)BeanMapHelper.Bean2Bean(rolePo, RoleBo.class);
-                    roleBos.add(roleBo);
+                List<SysRoleBo> sysRoleBos = new ArrayList<>();
+                List<SysRolePo> rolePos= iSysRoleService.list(Wrappers.lambdaQuery(SysRolePo.class).in(SysRolePo::getRoleId,roleIds));
+                for (SysRolePo rolePo:rolePos){
+                    SysRoleBo sysRoleBo = (SysRoleBo)BeanMapHelper.Bean2Bean(rolePo, SysRoleBo.class);
+                    sysRoleBos.add(sysRoleBo);
                 }
-                userBo.setRoleBos(roleBos);
+                userBo.setSysRoleBos(sysRoleBos);
             }
         }
         return userBo;
     }
 
     @Override
-    public boolean registerUser(UserBo user) {
-        UserPo userPo = (UserPo)BeanMapHelper.Bean2Bean(user, UserPo.class);
+    public boolean registerUser(SysUserBo user) {
+        SysUserPo userPo = (SysUserPo)BeanMapHelper.Bean2Bean(user, SysUserPo.class);
         SnowflakeIdWorker idWorker = new SnowflakeIdWorker(0, 0);
         userPo.setUid(String.valueOf(idWorker.nextId()));
         if (securityUserMapper.insert(userPo) > 0){

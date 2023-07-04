@@ -1,9 +1,9 @@
 package com.demo.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.demo.domain.RolePojo.RolePo;
+import com.demo.domain.SysUserPojo.SysUserPo;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
-public interface RoleMapper extends BaseMapper<RolePo> {
+public interface SysUserMapper extends BaseMapper<SysUserPo> {
 }

@@ -1,14 +1,15 @@
-package com.demo.domain.UserPojo;
+package com.demo.domain.SysUserPojo;
 
-import com.demo.domain.RolePojo.RoleBo;
+import com.baomidou.mybatisplus.annotation.TableName;
+import com.demo.domain.BaseEntity.BaseEntity;
 import lombok.Data;
 
-import java.util.List;
-
 @Data
-public class UserBo {
+@TableName("sys_user")
+public class SysUserPo extends BaseEntity {
 
     private Long userId;
+    private String uid;
     private String nickName;
     private String userName;
     private String mobile;
@@ -17,7 +18,4 @@ public class UserBo {
     private String signature;
     private String introduce;
     private Long status;
-
-    /** 角色对象 */
-    private List<RoleBo> roleBos;
 }

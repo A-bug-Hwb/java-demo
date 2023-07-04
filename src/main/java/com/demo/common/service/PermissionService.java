@@ -3,7 +3,7 @@ package com.demo.common.service;
 import com.demo.common.utils.SecurityUtils;
 import com.demo.common.utils.StringUtils;
 import com.demo.domain.LogRegPojo.LoginUser;
-import com.demo.domain.RolePojo.RoleBo;
+import com.demo.domain.SysRolePojo.SysRoleBo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
@@ -46,13 +46,13 @@ public class PermissionService {
             return false;
         }
         LoginUser loginUser = SecurityUtils.getLoginUser();
-        if (StringUtils.isNull(loginUser) || CollectionUtils.isEmpty(loginUser.getUserBo().getRoleBos()))
+        if (StringUtils.isNull(loginUser) || CollectionUtils.isEmpty(loginUser.getUserBo().getSysRoleBos()))
         {
             return false;
         }
-        for (RoleBo roleBo : loginUser.getUserBo().getRoleBos())
+        for (SysRoleBo sysRoleBo : loginUser.getUserBo().getSysRoleBos())
         {
-            String roleKey = roleBo.getRoleKey();
+            String roleKey = sysRoleBo.getRoleKey();
             if (SUPER_ADMIN.equals(roleKey) || roleKey.equals(StringUtils.trim(role)))
             {
                 return true;

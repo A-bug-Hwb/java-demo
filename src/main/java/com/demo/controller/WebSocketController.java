@@ -18,5 +18,4 @@ public class WebSocketController {
         WebSocketServer.sendString(message);
         return AjaxResult.success();
     }
-
 }

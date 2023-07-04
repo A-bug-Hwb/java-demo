@@ -1,11 +1,9 @@
-package com.demo.domain.RolePojo;
+package com.demo.domain.SysRolePojo;
 
-import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
 @Data
-@TableName("security_role")
-public class RolePo {
+public class SysRoleVo {
 
     private Long roleId;
     private String roleName;

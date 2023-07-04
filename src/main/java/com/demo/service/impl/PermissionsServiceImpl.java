@@ -1,6 +1,5 @@
 package com.demo.service.impl;
 
-import com.demo.domain.UserPojo.UserBo;
 import com.demo.service.IPermissionsService;
 import org.springframework.stereotype.Service;
 

@@ -1,9 +1,9 @@
 package com.demo.common.service;
 
 import com.demo.common.utils.StringUtils;
-import com.demo.domain.UserPojo.UserBo;
+import com.demo.domain.SysUserPojo.SysUserBo;
 import com.demo.service.IPermissionsService;
-import com.demo.service.IRoleService;
+import com.demo.service.ISysRoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -17,7 +17,7 @@ public class GetPermiInfoService {
     private IPermissionsService iPermissionsService;
 
     @Autowired
-    private IRoleService iRoleService;
+    private ISysRoleService iSysRoleService;
 
     /**
      * 获取角色数据权限
@@ -25,7 +25,7 @@ public class GetPermiInfoService {
      * @param user 用户信息
      * @return 角色权限信息
      */
-    public Set<String> getRolePermission(UserBo user)
+    public Set<String> getRolePermission(SysUserBo user)
     {
         Set<String> roles = new HashSet<String>();
         // 管理员拥有所有权限
@@ -35,7 +35,7 @@ public class GetPermiInfoService {
         }
         else
         {
-            roles.addAll(iRoleService.getRoleKeys(user.getUserId()));
+            roles.addAll(iSysRoleService.getRoleKeys(user.getUserId()));
         }
         return roles;
     }
@@ -46,7 +46,7 @@ public class GetPermiInfoService {
      * @param user 用户信息
      * @return 菜单权限信息
      */
-    public Set<String> getMenuPermission(UserBo user)
+    public Set<String> getMenuPermission(SysUserBo user)
     {
         Set<String> perms = new HashSet<String>();
         // 管理员拥有所有权限
@@ -61,7 +61,7 @@ public class GetPermiInfoService {
         return perms;
     }
 
-    private boolean isAdmin(UserBo user){
+    private boolean isAdmin(SysUserBo user){
         return StringUtils.isNotNull(user) && user.getUserId() == 1L;
     }
 }

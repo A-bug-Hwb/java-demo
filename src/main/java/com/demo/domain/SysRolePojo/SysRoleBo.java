@@ -1,9 +1,9 @@
-package com.demo.domain.RolePojo;
+package com.demo.domain.SysRolePojo;
 
 import lombok.Data;
 
 @Data
-public class RoleVo {
+public class SysRoleBo {
 
     private Long roleId;
     private String roleName;
